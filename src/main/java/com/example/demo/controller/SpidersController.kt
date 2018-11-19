@@ -21,6 +21,6 @@ class SpidersController {
     @GetMapping("/realtyInfo")
     fun realtyInfo(): String {
         realtyDataService.spiderData()
-        return "hello world!"
+        return "hello yaoyao!"
     }
 }

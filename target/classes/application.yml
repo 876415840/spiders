@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://10.10.231.135:3306/finup_store
-    username: root
-    data-password: OYLDASuPfbpsEQB6
+    url: $db.url$
+    username: $db.username$
+    data-password: $db.url$
     driver-class-name: com.mysql.jdbc.Driver
   ##############################  druid  ################################
 #  datasource:

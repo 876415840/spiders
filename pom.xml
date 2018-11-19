@@ -121,5 +121,26 @@
         </plugins>
 	</build>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <db.url>jdbc:mysql://10.10.231.135:3306/spiders</db.url>
+                <db.username>root</db.username>
+                <db.password>OYLDASuPfbpsEQB6</db.password>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
+            <properties>
+                <db.url>jdbc:mysql://localhost:3306/spiders</db.url>
+                <db.username>root</db.username>
+                <db.password>!@#$%12345qwert</db.password>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
