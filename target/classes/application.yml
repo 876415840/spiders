@@ -1,30 +1,34 @@
+server:
+  port: 30918
+  useForwardHeaders: true
+  tomcat:
+    uriEncoding: UTF-8
+  session:
+    timeout: 36000
+
 spring:
   datasource:
-    url: $db.url$
-    username: $db.username$
-    data-password: $db.url$
-    driver-class-name: com.mysql.jdbc.Driver
-  ##############################  druid  ################################
-#  datasource:
-#    # 使用druid数据源
-#    type: com.alibaba.druid.pool.DruidDataSource
-#    filters: stat
-#    maxActive: 20
-#    initialSize: 5
-#    maxWait: 60000
-#    minIdle: 10
-#    timeBetweenEvictionRunsMillis: 60000
-#    minEvictableIdleTimeMillis: 300000
-#    validationQuery: select 'x'
-#    testWhileIdle: true
-#    testOnBorrow: false
-#    testOnReturn: false
-#    poolPreparedStatements: true
-#    maxOpenPreparedStatements: 20
-#    maxPoolPreparedStatementPerConnectionSize: 20
-  #######################################################################
-
-  ##############################  redis  ################################
+    url: jdbc:mysql://47.105.185.111:3306/spiders
+    username: root
+    password: '!QAZ1qaz'
+    driverClassName: com.mysql.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 5
+    maxWait: 60000
+    minIdle: 10
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    maxPoolPreparedStatementPerConnectionSize: 20
+  # redis
 #  redis:
 #    # Redis数据库索引（默认为0）
 #    database: 0
@@ -44,14 +48,23 @@ spring:
 #    min-idle: 0
 #    # 连接超时时间（毫秒）
 #    timeout: 0
-  #######################################################################
 
 ##############################  mybatis  ################################
 #mybatis:
 #  mapperLocations: classpath:mapper/*.xml
-#  typeAliasesPackage: com.model
-  # config: mybatis-config.xml 配置文件的路径
-  # typeHandlersPackage: 扫描typeHandlers的包
-  # checkConfigLocation: 检查配置文件是否存在
-  # xecutorType: 设置执行模式（SIMPLE, REUSE, BATCH），默认为SIMPLE
+#  typeAliasesPackage: com.example.demo.entity
+#########################################################################
+
+################################  分页  ##################################
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+#########################################################################
+
+################################  log  ##################################
+logging:
+  file: logger.log debug
+  level: debug
 #########################################################################

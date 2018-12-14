@@ -1,10 +1,13 @@
 package com.example.demo.service.impl
 
+import com.alibaba.fastjson.JSON
+import com.example.demo.entity.User
+import com.example.demo.mapper.UserMapper
 import com.example.demo.service.RealtyDataService
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import java.util.*
 
 /**
  * @Description 房地产数据接口实现
@@ -16,7 +19,10 @@ import java.util.*
 class RealtyDataServiceImpl : RealtyDataService {
 
     private val LOGGER: Logger = LoggerFactory.getLogger(RealtyDataServiceImpl::class.java)
-    
+
+    @Autowired
+    lateinit var userMapper: UserMapper
+
     /**
      * @Description: 爬取数据
      * @author mengqinghao
@@ -25,7 +31,8 @@ class RealtyDataServiceImpl : RealtyDataService {
      * @return: 
      */
     override fun spiderData() {
-        LOGGER.info("爬取数据-------------")
+        var user: User  = userMapper.getUserById(1)
+        LOGGER.info("爬取数据-------------{}", JSON.toJSONString(user))
     }
 
 }
