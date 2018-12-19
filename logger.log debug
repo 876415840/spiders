@@ -1570,3 +1570,1135 @@ java.sql.SQLException: unkow jdbc driver : $db.url$
 2018-12-14 17:07:19.307  INFO 7544 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
 2018-12-14 17:07:19.473  INFO 7544 --- [http-nio-30918-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2018-12-14 17:07:20.423  INFO 7544 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------{"id":1,"name":"test12344"}
+2018-12-14 17:38:11.957  INFO 7544 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78fa769e: startup date [Fri Dec 14 17:04:26 CST 2018]; root of context hierarchy
+2018-12-14 17:38:11.960  INFO 7544 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-14 17:38:11.960  INFO 7544 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-14 17:38:11.967  INFO 7544 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2018-12-14 17:41:16.166  INFO 8314 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 8314 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-14 17:41:16.171  INFO 8314 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-14 17:41:16.229  INFO 8314 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78fa769e: startup date [Fri Dec 14 17:41:16 CST 2018]; root of context hierarchy
+2018-12-14 17:41:17.407  INFO 8314 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-14 17:41:17.424  INFO 8314 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-14 17:41:17.425  INFO 8314 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-14 17:41:17.537  INFO 8314 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-14 17:41:17.538  INFO 8314 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1312 ms
+2018-12-14 17:41:17.773  INFO 8314 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-14 17:41:17.774  INFO 8314 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-14 17:41:17.778  INFO 8314 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-14 17:41:17.778  INFO 8314 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-14 17:41:17.778  INFO 8314 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-14 17:41:17.779  INFO 8314 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-14 17:41:17.779  INFO 8314 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-14 17:41:18.520  INFO 8314 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78fa769e: startup date [Fri Dec 14 17:41:16 CST 2018]; root of context hierarchy
+2018-12-14 17:41:18.586  INFO 8314 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-14 17:41:18.589  INFO 8314 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-14 17:41:18.589  INFO 8314 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-14 17:41:18.614  INFO 8314 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-14 17:41:18.614  INFO 8314 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-14 17:41:18.648  INFO 8314 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-14 17:41:19.033  INFO 8314 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-14 17:41:19.035  INFO 8314 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-14 17:41:19.038  INFO 8314 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-14 17:41:19.109  INFO 8314 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-14 17:41:19.114  INFO 8314 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.414 seconds (JVM running for 13.819)
+2018-12-14 17:41:19.115  INFO 8314 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-14 17:42:11.015  INFO 8314 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-14 17:42:11.015  INFO 8314 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-14 17:42:11.036  INFO 8314 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-14 17:42:11.225  INFO 8314 --- [http-nio-30918-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-12-14 17:42:12.159  INFO 8314 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------{"id":1,"name":"test12344"}============1
+2018-12-14 17:51:47.183  INFO 8314 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78fa769e: startup date [Fri Dec 14 17:41:16 CST 2018]; root of context hierarchy
+2018-12-14 17:51:47.186  INFO 8314 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-14 17:51:47.186  INFO 8314 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-14 17:51:47.192  INFO 8314 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2018-12-14 19:07:17.207  INFO 9455 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9455 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-14 19:07:17.213  INFO 9455 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-14 19:07:17.274  INFO 9455 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Fri Dec 14 19:07:17 CST 2018]; root of context hierarchy
+2018-12-14 19:07:18.599  INFO 9455 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-14 19:07:18.616  INFO 9455 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-14 19:07:18.618  INFO 9455 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-14 19:07:18.739  INFO 9455 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-14 19:07:18.739  INFO 9455 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1468 ms
+2018-12-14 19:07:18.997  INFO 9455 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-14 19:07:18.999  INFO 9455 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-14 19:07:19.003  INFO 9455 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-14 19:07:19.004  INFO 9455 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-14 19:07:19.004  INFO 9455 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-14 19:07:19.005  INFO 9455 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-14 19:07:19.005  INFO 9455 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-14 19:07:19.535  WARN 9455 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'spidersController': Unsatisfied dependency expressed through field 'realtyDataService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'realtyDataServiceImpl': Unsatisfied dependency expressed through field 'springPipelineFactory'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.geccocrawler.gecco.pipeline.PipelineFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-12-14 19:07:19.537  INFO 9455 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-12-14 19:07:19.556  WARN 9455 --- [localhost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2018-12-14 19:07:19.565  INFO 9455 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-12-14 19:07:19.638 ERROR 9455 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field springPipelineFactory in com.example.demo.service.impl.RealtyDataServiceImpl required a bean of type 'com.geccocrawler.gecco.pipeline.PipelineFactory' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.geccocrawler.gecco.pipeline.PipelineFactory' in your configuration.
+
+2018-12-14 19:10:22.451  INFO 9488 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9488 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-14 19:10:22.457  INFO 9488 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-14 19:10:22.519  INFO 9488 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Fri Dec 14 19:10:22 CST 2018]; root of context hierarchy
+2018-12-14 19:10:23.865  INFO 9488 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-14 19:10:23.884  INFO 9488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-14 19:10:23.885  INFO 9488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-14 19:10:24.007  INFO 9488 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-14 19:10:24.008  INFO 9488 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1492 ms
+2018-12-14 19:10:24.256  INFO 9488 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-14 19:10:24.257  INFO 9488 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-14 19:10:24.261  INFO 9488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-14 19:10:24.262  INFO 9488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-14 19:10:24.262  INFO 9488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-14 19:10:24.263  INFO 9488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-14 19:10:24.263  INFO 9488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-14 19:10:24.772  WARN 9488 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'spidersController': Unsatisfied dependency expressed through field 'realtyDataService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'realtyDataServiceImpl': Unsatisfied dependency expressed through field 'springPipelineFactory'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.geccocrawler.gecco.pipeline.PipelineFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-12-14 19:10:24.775  INFO 9488 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-12-14 19:10:24.794  WARN 9488 --- [localhost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2018-12-14 19:10:24.804  INFO 9488 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-12-14 19:10:24.879 ERROR 9488 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field springPipelineFactory in com.example.demo.service.impl.RealtyDataServiceImpl required a bean of type 'com.geccocrawler.gecco.pipeline.PipelineFactory' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.geccocrawler.gecco.pipeline.PipelineFactory' in your configuration.
+
+2018-12-14 19:11:08.823  INFO 9503 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9503 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-14 19:11:08.829  INFO 9503 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-14 19:11:08.894  INFO 9503 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Fri Dec 14 19:11:08 CST 2018]; root of context hierarchy
+2018-12-14 19:11:10.208  INFO 9503 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-14 19:11:10.225  INFO 9503 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-14 19:11:10.226  INFO 9503 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-14 19:11:10.349  INFO 9503 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-14 19:11:10.350  INFO 9503 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1460 ms
+2018-12-14 19:11:10.607  INFO 9503 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-14 19:11:10.609  INFO 9503 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-14 19:11:10.613  INFO 9503 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-14 19:11:10.614  INFO 9503 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-14 19:11:10.614  INFO 9503 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-14 19:11:10.614  INFO 9503 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-14 19:11:10.614  INFO 9503 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-14 19:11:11.071  INFO 9503 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Fri Dec 14 19:11:08 CST 2018]; root of context hierarchy
+2018-12-14 19:11:11.169  INFO 9503 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-14 19:11:11.172  INFO 9503 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-14 19:11:11.173  INFO 9503 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-14 19:11:11.210  INFO 9503 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-14 19:11:11.210  INFO 9503 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-14 19:11:11.256  INFO 9503 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-14 19:11:12.157  INFO 9503 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-14 19:11:12.158  INFO 9503 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-14 19:11:12.162  INFO 9503 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-14 19:11:12.235  INFO 9503 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-14 19:11:12.240  INFO 9503 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.844 seconds (JVM running for 14.282)
+2018-12-14 19:11:12.241  INFO 9503 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-14 19:11:15.984  INFO 9503 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-14 19:11:15.985  INFO 9503 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-14 19:11:16.006  INFO 9503 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2018-12-14 19:11:16.044  INFO 9503 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------{}============{}
+2018-12-14 19:11:16.049  INFO 9503 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-14 19:11:16.164  INFO 9503 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 63 ms to scan 2 urls, producing 44 keys and 182 values 
+2018-12-14 19:11:16.556  INFO 9503 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-14 19:11:16.636  INFO 9503 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 45 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-14 19:11:19.147 ERROR 9503 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-14 19:11:22.461 ERROR 9503 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-14 19:11:27.411 ERROR 9503 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-14 19:11:30.666 ERROR 9503 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-14 19:11:34.193  INFO 9503 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Fri Dec 14 19:11:08 CST 2018]; root of context hierarchy
+2018-12-14 19:11:34.195  INFO 9503 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-14 19:11:34.195  INFO 9503 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 16:42:45.222  INFO 8128 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 8128 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 16:42:45.227  INFO 8128 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 16:42:45.279  INFO 8128 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b239d7d: startup date [Wed Dec 19 16:42:45 CST 2018]; root of context hierarchy
+2018-12-19 16:42:46.463  INFO 8128 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 16:42:46.479  INFO 8128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 16:42:46.480  INFO 8128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 16:42:46.582  INFO 8128 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 16:42:46.583  INFO 8128 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1307 ms
+2018-12-19 16:42:46.787  INFO 8128 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 16:42:46.789  INFO 8128 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 16:42:46.792  INFO 8128 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 16:42:46.792  INFO 8128 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 16:42:46.792  INFO 8128 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 16:42:46.792  INFO 8128 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 16:42:46.793  INFO 8128 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 16:42:47.078  INFO 8128 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b239d7d: startup date [Wed Dec 19 16:42:45 CST 2018]; root of context hierarchy
+2018-12-19 16:42:47.145  INFO 8128 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 16:42:47.148  INFO 8128 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 16:42:47.148  INFO 8128 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 16:42:47.169  INFO 8128 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 16:42:47.170  INFO 8128 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 16:42:47.197  INFO 8128 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 16:42:47.814  INFO 8128 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 16:42:47.815  INFO 8128 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 16:42:47.818  INFO 8128 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 16:42:47.884  INFO 8128 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 16:42:47.889  INFO 8128 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.11 seconds (JVM running for 13.626)
+2018-12-19 16:42:47.889  INFO 8128 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 16:49:15.358  INFO 8128 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 16:49:15.358  INFO 8128 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 16:49:15.374  INFO 8128 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2018-12-19 16:49:15.407  INFO 8128 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------{}============{}
+2018-12-19 16:49:15.411  INFO 8128 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 16:49:15.514  INFO 8128 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 56 ms to scan 2 urls, producing 44 keys and 182 values 
+2018-12-19 16:49:15.835  INFO 8128 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 16:49:15.903  INFO 8128 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 36 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 16:49:18.020 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:49:22.509 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:49:27.790 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:49:31.524 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:49:36.102 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:49:41.817 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:49:47.202 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:49:51.517 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:49:56.886 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:50:02.443 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:50:05.301 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:50:09.349 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:50:15.088 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:50:19.030 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:50:23.477 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:50:27.849 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:50:32.047 ERROR 8128 --- [Tcom.example.demo.crawler0] com.geccocrawler.gecco.spider.Spider     : cant't match url : https://www.jd.com/allSort.aspx
+2018-12-19 16:50:37.127  INFO 8128 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b239d7d: startup date [Wed Dec 19 16:42:45 CST 2018]; root of context hierarchy
+2018-12-19 16:50:37.128  INFO 8128 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 16:50:37.129  INFO 8128 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 18:38:32.072  INFO 9553 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9553 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 18:38:32.080  INFO 9553 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 18:38:32.138  INFO 9553 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:38:32 CST 2018]; root of context hierarchy
+2018-12-19 18:38:33.406  INFO 9553 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 18:38:33.423  INFO 9553 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 18:38:33.424  INFO 9553 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 18:38:33.532  INFO 9553 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 18:38:33.532  INFO 9553 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1397 ms
+2018-12-19 18:38:33.768  INFO 9553 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 18:38:33.770  INFO 9553 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 18:38:33.773  INFO 9553 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 18:38:33.774  INFO 9553 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 18:38:33.774  INFO 9553 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 18:38:33.774  INFO 9553 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 18:38:33.774  INFO 9553 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 18:38:34.164  INFO 9553 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:38:32 CST 2018]; root of context hierarchy
+2018-12-19 18:38:34.234  INFO 9553 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 18:38:34.237  INFO 9553 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 18:38:34.237  INFO 9553 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 18:38:34.267  INFO 9553 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:38:34.268  INFO 9553 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:38:34.306  INFO 9553 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:38:35.105  INFO 9553 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 18:38:35.107  INFO 9553 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 18:38:35.113  INFO 9553 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 18:38:35.180  INFO 9553 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 18:38:35.186  INFO 9553 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.636 seconds (JVM running for 14.3)
+2018-12-19 18:38:35.186  INFO 9553 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 18:39:44.953  INFO 9553 --- [http-nio-30918-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 18:39:44.955  INFO 9553 --- [http-nio-30918-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 18:39:44.975  INFO 9553 --- [http-nio-30918-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 18:39:45.015  INFO 9553 --- [http-nio-30918-exec-2] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 18:39:45.103  INFO 9553 --- [http-nio-30918-exec-2] org.reflections.Reflections              : Reflections took 57 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 18:39:45.450  INFO 9553 --- [http-nio-30918-exec-2] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 18:39:45.516  INFO 9553 --- [http-nio-30918-exec-2] org.reflections.Reflections              : Reflections took 35 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 18:39:45.538  INFO 9553 --- [http-nio-30918-exec-2] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 18:40:50.211  INFO 9553 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:38:32 CST 2018]; root of context hierarchy
+2018-12-19 18:40:50.213  INFO 9553 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 18:40:50.213  INFO 9553 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 18:43:26.273  INFO 9596 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9596 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 18:43:26.279  INFO 9596 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 18:43:26.336  INFO 9596 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:43:26 CST 2018]; root of context hierarchy
+2018-12-19 18:43:27.568  INFO 9596 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 18:43:27.587  INFO 9596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 18:43:27.588  INFO 9596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 18:43:27.689  INFO 9596 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 18:43:27.689  INFO 9596 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1355 ms
+2018-12-19 18:43:27.924  INFO 9596 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 18:43:27.925  INFO 9596 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 18:43:27.929  INFO 9596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 18:43:27.930  INFO 9596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 18:43:27.930  INFO 9596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 18:43:27.930  INFO 9596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 18:43:27.931  INFO 9596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 18:43:28.332  INFO 9596 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:43:26 CST 2018]; root of context hierarchy
+2018-12-19 18:43:28.399  INFO 9596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 18:43:28.402  INFO 9596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 18:43:28.402  INFO 9596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 18:43:28.429  INFO 9596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:43:28.429  INFO 9596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:43:28.468  INFO 9596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:43:29.246  INFO 9596 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 18:43:29.248  INFO 9596 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 18:43:29.251  INFO 9596 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 18:43:29.325  INFO 9596 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 18:43:29.330  INFO 9596 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.503 seconds (JVM running for 13.98)
+2018-12-19 18:43:29.330  INFO 9596 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 18:49:44.813  INFO 9596 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 18:49:44.814  INFO 9596 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 18:49:44.836  INFO 9596 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-12-19 18:49:44.871  INFO 9596 --- [http-nio-30918-exec-1] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 18:49:44.966  INFO 9596 --- [http-nio-30918-exec-1] org.reflections.Reflections              : Reflections took 62 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 18:49:45.331  INFO 9596 --- [http-nio-30918-exec-1] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 18:49:45.397  INFO 9596 --- [http-nio-30918-exec-1] org.reflections.Reflections              : Reflections took 37 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 18:49:45.423  INFO 9596 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 18:49:59.244  INFO 9596 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:43:26 CST 2018]; root of context hierarchy
+2018-12-19 18:49:59.247  INFO 9596 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 18:49:59.248  INFO 9596 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 18:52:19.692  INFO 9667 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9667 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 18:52:19.698  INFO 9667 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 18:52:19.755  INFO 9667 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:52:19 CST 2018]; root of context hierarchy
+2018-12-19 18:52:21.088  INFO 9667 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 18:52:21.104  INFO 9667 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 18:52:21.105  INFO 9667 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 18:52:21.213  INFO 9667 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 18:52:21.214  INFO 9667 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1462 ms
+2018-12-19 18:52:21.465  INFO 9667 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 18:52:21.468  INFO 9667 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 18:52:21.472  INFO 9667 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 18:52:21.472  INFO 9667 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 18:52:21.472  INFO 9667 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 18:52:21.473  INFO 9667 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 18:52:21.473  INFO 9667 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 18:52:21.908  INFO 9667 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:52:19 CST 2018]; root of context hierarchy
+2018-12-19 18:52:21.985  INFO 9667 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 18:52:21.988  INFO 9667 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 18:52:21.989  INFO 9667 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 18:52:22.019  INFO 9667 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:52:22.019  INFO 9667 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:52:22.057  INFO 9667 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:52:22.803  INFO 9667 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 18:52:22.804  INFO 9667 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 18:52:22.808  INFO 9667 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 18:52:22.875  INFO 9667 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 18:52:22.880  INFO 9667 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.624 seconds (JVM running for 14.039)
+2018-12-19 18:52:22.880  INFO 9667 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 18:52:42.280  INFO 9667 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 18:52:42.280  INFO 9667 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 18:52:42.300  INFO 9667 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 18:52:42.335  INFO 9667 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 18:52:42.338  INFO 9667 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 18:52:42.444  INFO 9667 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 62 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 18:52:42.787  INFO 9667 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 18:52:42.852  INFO 9667 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 37 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 18:52:46.236  INFO 9667 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 18:55:41.445  INFO 9667 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:52:19 CST 2018]; root of context hierarchy
+2018-12-19 18:55:41.447  INFO 9667 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 18:55:41.447  INFO 9667 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 18:56:18.537  INFO 9701 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9701 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 18:56:18.543  INFO 9701 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 18:56:18.601  INFO 9701 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:56:18 CST 2018]; root of context hierarchy
+2018-12-19 18:56:19.801  INFO 9701 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 18:56:19.817  INFO 9701 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 18:56:19.818  INFO 9701 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 18:56:19.928  INFO 9701 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 18:56:19.929  INFO 9701 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1331 ms
+2018-12-19 18:56:20.162  INFO 9701 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 18:56:20.164  INFO 9701 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 18:56:20.168  INFO 9701 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 18:56:20.168  INFO 9701 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 18:56:20.169  INFO 9701 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 18:56:20.169  INFO 9701 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 18:56:20.169  INFO 9701 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 18:56:20.545  INFO 9701 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:56:18 CST 2018]; root of context hierarchy
+2018-12-19 18:56:20.616  INFO 9701 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 18:56:20.619  INFO 9701 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 18:56:20.619  INFO 9701 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 18:56:20.650  INFO 9701 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:56:20.651  INFO 9701 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:56:20.690  INFO 9701 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 18:56:21.450  INFO 9701 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 18:56:21.452  INFO 9701 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 18:56:21.459  INFO 9701 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 18:56:21.545  INFO 9701 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 18:56:21.551  INFO 9701 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.489 seconds (JVM running for 13.923)
+2018-12-19 18:56:21.552  INFO 9701 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 18:57:31.698  INFO 9701 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 18:57:31.699  INFO 9701 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 18:57:31.719  INFO 9701 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 18:57:31.756  INFO 9701 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 18:57:31.760  INFO 9701 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 18:57:31.869  INFO 9701 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 64 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 18:57:32.193  INFO 9701 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 18:57:32.250  INFO 9701 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 32 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 18:57:34.638  INFO 9701 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:00:43.101  INFO 9701 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 18:56:18 CST 2018]; root of context hierarchy
+2018-12-19 19:00:43.103  INFO 9701 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:00:43.104  INFO 9701 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:01:07.657  INFO 9744 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9744 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:01:07.662  INFO 9744 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:01:07.721  INFO 9744 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:01:07 CST 2018]; root of context hierarchy
+2018-12-19 19:01:08.928  INFO 9744 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:01:08.946  INFO 9744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:01:08.947  INFO 9744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:01:09.072  INFO 9744 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:01:09.073  INFO 9744 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1355 ms
+2018-12-19 19:01:09.311  INFO 9744 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:01:09.313  INFO 9744 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:01:09.317  INFO 9744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:01:09.317  INFO 9744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:01:09.318  INFO 9744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:01:09.318  INFO 9744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:01:09.318  INFO 9744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:01:09.685  INFO 9744 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:01:07 CST 2018]; root of context hierarchy
+2018-12-19 19:01:09.755  INFO 9744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:01:09.758  INFO 9744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:01:09.759  INFO 9744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:01:09.790  INFO 9744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:01:09.806  INFO 9744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:01:09.841  INFO 9744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:01:10.639  INFO 9744 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:01:10.640  INFO 9744 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:01:10.644  INFO 9744 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:01:10.713  INFO 9744 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:01:10.717  INFO 9744 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.509 seconds (JVM running for 13.923)
+2018-12-19 19:01:10.718  INFO 9744 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:01:44.814  INFO 9744 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:01:44.814  INFO 9744 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:01:44.835  INFO 9744 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 19:01:44.868  INFO 9744 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:01:44.872  INFO 9744 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:01:44.967  INFO 9744 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 59 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 19:01:45.292  INFO 9744 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:01:45.350  INFO 9744 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 32 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:06:47.131  INFO 9744 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:01:07 CST 2018]; root of context hierarchy
+2018-12-19 19:06:47.134  INFO 9744 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:06:47.134  INFO 9744 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:07:12.192  INFO 9837 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9837 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:07:12.197  INFO 9837 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:07:12.254  INFO 9837 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:07:12 CST 2018]; root of context hierarchy
+2018-12-19 19:07:13.456  INFO 9837 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:07:13.473  INFO 9837 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:07:13.474  INFO 9837 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:07:13.589  INFO 9837 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:07:13.590  INFO 9837 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1339 ms
+2018-12-19 19:07:13.850  INFO 9837 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:07:13.852  INFO 9837 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:07:13.857  INFO 9837 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:07:13.858  INFO 9837 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:07:13.858  INFO 9837 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:07:13.858  INFO 9837 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:07:13.859  INFO 9837 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:07:14.252  INFO 9837 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:07:12 CST 2018]; root of context hierarchy
+2018-12-19 19:07:14.322  INFO 9837 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:07:14.325  INFO 9837 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:07:14.326  INFO 9837 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:07:14.353  INFO 9837 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:07:14.353  INFO 9837 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:07:14.393  INFO 9837 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:07:15.223  INFO 9837 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:07:15.225  INFO 9837 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:07:15.229  INFO 9837 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:07:15.303  INFO 9837 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:07:15.309  INFO 9837 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.582 seconds (JVM running for 14.007)
+2018-12-19 19:07:15.309  INFO 9837 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:07:16.760  INFO 9837 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:07:16.760  INFO 9837 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:07:16.780  INFO 9837 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 19:07:16.813  INFO 9837 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:07:16.817  INFO 9837 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:07:16.911  INFO 9837 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 57 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 19:07:17.243  INFO 9837 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:07:17.304  INFO 9837 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 35 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:07:19.527  INFO 9837 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:07:25.467  INFO 9837 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:07:12 CST 2018]; root of context hierarchy
+2018-12-19 19:07:25.469  INFO 9837 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:07:25.470  INFO 9837 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:08:19.022  INFO 9851 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9851 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:08:19.027  INFO 9851 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:08:19.087  INFO 9851 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:08:19 CST 2018]; root of context hierarchy
+2018-12-19 19:08:20.322  INFO 9851 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:08:20.342  INFO 9851 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:08:20.343  INFO 9851 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:08:20.460  INFO 9851 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:08:20.461  INFO 9851 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1377 ms
+2018-12-19 19:08:20.693  INFO 9851 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:08:20.695  INFO 9851 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:08:20.699  INFO 9851 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:08:20.701  INFO 9851 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:08:20.701  INFO 9851 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:08:20.701  INFO 9851 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:08:20.701  INFO 9851 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:08:21.080  INFO 9851 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:08:19 CST 2018]; root of context hierarchy
+2018-12-19 19:08:21.151  INFO 9851 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:08:21.154  INFO 9851 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:08:21.154  INFO 9851 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:08:21.186  INFO 9851 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:08:21.186  INFO 9851 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:08:21.221  INFO 9851 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:08:21.982  INFO 9851 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:08:21.984  INFO 9851 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:08:21.987  INFO 9851 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:08:22.054  INFO 9851 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:08:22.058  INFO 9851 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.509 seconds (JVM running for 13.921)
+2018-12-19 19:08:22.058  INFO 9851 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:09:00.691  INFO 9851 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:09:00.691  INFO 9851 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:09:00.711  INFO 9851 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 19:09:00.747  INFO 9851 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:09:00.750  INFO 9851 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:09:00.844  INFO 9851 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 58 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 19:09:01.184  INFO 9851 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:09:01.243  INFO 9851 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 33 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:09:05.119  INFO 9851 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:09:29.896  INFO 9851 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:08:19 CST 2018]; root of context hierarchy
+2018-12-19 19:09:29.898  INFO 9851 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:09:29.898  INFO 9851 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:09:53.844  INFO 9869 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9869 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:09:53.850  INFO 9869 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:09:53.907  INFO 9869 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:09:53 CST 2018]; root of context hierarchy
+2018-12-19 19:09:55.111  INFO 9869 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:09:55.129  INFO 9869 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:09:55.130  INFO 9869 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:09:55.244  INFO 9869 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:09:55.244  INFO 9869 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1340 ms
+2018-12-19 19:09:55.485  INFO 9869 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:09:55.487  INFO 9869 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:09:55.491  INFO 9869 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:09:55.492  INFO 9869 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:09:55.492  INFO 9869 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:09:55.492  INFO 9869 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:09:55.492  INFO 9869 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:09:55.872  INFO 9869 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:09:53 CST 2018]; root of context hierarchy
+2018-12-19 19:09:55.939  INFO 9869 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:09:55.942  INFO 9869 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:09:55.943  INFO 9869 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:09:55.971  INFO 9869 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:09:55.971  INFO 9869 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:09:56.006  INFO 9869 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:09:56.908  INFO 9869 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:09:56.910  INFO 9869 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:09:56.915  INFO 9869 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:09:56.982  INFO 9869 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:09:56.987  INFO 9869 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.581 seconds (JVM running for 14.028)
+2018-12-19 19:09:56.988  INFO 9869 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:10:56.348  INFO 9869 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:10:56.348  INFO 9869 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:10:56.370  INFO 9869 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-12-19 19:10:56.404  INFO 9869 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:10:56.408  INFO 9869 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:10:56.514  INFO 9869 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 63 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 19:10:56.864  INFO 9869 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:10:56.930  INFO 9869 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 37 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:11:00.510  INFO 9869 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:12:23.396  INFO 9869 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:09:53 CST 2018]; root of context hierarchy
+2018-12-19 19:12:23.398  INFO 9869 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:12:23.398  INFO 9869 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:12:48.786  INFO 9899 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9899 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:12:48.791  INFO 9899 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:12:48.851  INFO 9899 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:12:48 CST 2018]; root of context hierarchy
+2018-12-19 19:12:50.098  INFO 9899 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:12:50.115  INFO 9899 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:12:50.117  INFO 9899 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:12:50.225  INFO 9899 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:12:50.226  INFO 9899 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1378 ms
+2018-12-19 19:12:50.466  INFO 9899 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:12:50.467  INFO 9899 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:12:50.471  INFO 9899 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:12:50.471  INFO 9899 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:12:50.472  INFO 9899 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:12:50.472  INFO 9899 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:12:50.472  INFO 9899 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:12:50.833  INFO 9899 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:12:48 CST 2018]; root of context hierarchy
+2018-12-19 19:12:50.899  INFO 9899 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:12:50.902  INFO 9899 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:12:50.903  INFO 9899 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:12:50.931  INFO 9899 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:12:50.931  INFO 9899 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:12:50.970  INFO 9899 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:12:51.687  INFO 9899 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:12:51.688  INFO 9899 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:12:51.692  INFO 9899 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:12:51.756  INFO 9899 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:12:51.761  INFO 9899 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.398 seconds (JVM running for 13.808)
+2018-12-19 19:12:51.761  INFO 9899 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:14:33.448  INFO 9899 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:14:33.448  INFO 9899 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:14:33.468  INFO 9899 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 19:14:33.502  INFO 9899 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:14:33.506  INFO 9899 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:14:33.606  INFO 9899 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 59 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 19:14:33.934  INFO 9899 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:14:33.989  INFO 9899 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 30 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:14:38.154  INFO 9899 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:16:00.402  INFO 9899 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:12:48 CST 2018]; root of context hierarchy
+2018-12-19 19:16:00.404  INFO 9899 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:16:00.404  INFO 9899 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:17:13.155  INFO 9935 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9935 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:17:13.160  INFO 9935 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:17:13.216  INFO 9935 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:17:13 CST 2018]; root of context hierarchy
+2018-12-19 19:17:14.427  INFO 9935 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:17:14.441  INFO 9935 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:17:14.442  INFO 9935 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:17:14.548  INFO 9935 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:17:14.548  INFO 9935 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1334 ms
+2018-12-19 19:17:14.775  INFO 9935 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:17:14.776  INFO 9935 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:17:14.780  INFO 9935 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:17:14.780  INFO 9935 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:17:14.781  INFO 9935 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:17:14.781  INFO 9935 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:17:14.781  INFO 9935 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:17:15.153  INFO 9935 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:17:13 CST 2018]; root of context hierarchy
+2018-12-19 19:17:15.219  INFO 9935 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:17:15.222  INFO 9935 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:17:15.223  INFO 9935 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:17:15.253  INFO 9935 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:17:15.253  INFO 9935 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:17:15.288  INFO 9935 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:17:16.028  INFO 9935 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:17:16.029  INFO 9935 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:17:16.032  INFO 9935 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:17:16.101  INFO 9935 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:17:16.106  INFO 9935 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.379 seconds (JVM running for 13.789)
+2018-12-19 19:17:16.106  INFO 9935 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:17:22.740  INFO 9935 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:17:22.741  INFO 9935 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:17:22.761  INFO 9935 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 19:17:22.796  INFO 9935 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:17:22.799  INFO 9935 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:17:22.893  INFO 9935 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 58 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 19:17:23.212  INFO 9935 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:17:23.275  INFO 9935 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 35 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:17:26.066  INFO 9935 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:19:50.173  INFO 9935 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:17:13 CST 2018]; root of context hierarchy
+2018-12-19 19:19:50.175  INFO 9935 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:19:50.176  INFO 9935 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:20:14.275  INFO 9962 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 9962 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:20:14.280  INFO 9962 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:20:14.337  INFO 9962 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:20:14 CST 2018]; root of context hierarchy
+2018-12-19 19:20:15.530  INFO 9962 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:20:15.546  INFO 9962 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:20:15.547  INFO 9962 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:20:15.657  INFO 9962 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:20:15.658  INFO 9962 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1324 ms
+2018-12-19 19:20:15.932  INFO 9962 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:20:15.934  INFO 9962 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:20:15.938  INFO 9962 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:20:15.938  INFO 9962 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:20:15.939  INFO 9962 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:20:15.939  INFO 9962 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:20:15.939  INFO 9962 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:20:16.308  INFO 9962 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:20:14 CST 2018]; root of context hierarchy
+2018-12-19 19:20:16.382  INFO 9962 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:20:16.385  INFO 9962 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:20:16.385  INFO 9962 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:20:16.415  INFO 9962 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:20:16.415  INFO 9962 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:20:16.451  INFO 9962 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:20:17.203  INFO 9962 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:20:17.205  INFO 9962 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:20:17.209  INFO 9962 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:20:17.277  INFO 9962 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:20:17.282  INFO 9962 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.43 seconds (JVM running for 13.836)
+2018-12-19 19:20:17.282  INFO 9962 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:22:42.516  INFO 9962 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:22:42.516  INFO 9962 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:22:42.544  INFO 9962 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-12-19 19:22:42.585  INFO 9962 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:22:42.589  INFO 9962 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:22:42.714  INFO 9962 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 68 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 19:22:43.095  INFO 9962 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:22:43.167  INFO 9962 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 40 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:22:46.528  INFO 9962 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:31:23.547  INFO 9962 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:20:14 CST 2018]; root of context hierarchy
+2018-12-19 19:31:23.548  INFO 9962 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:31:23.549  INFO 9962 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:44:50.470  INFO 10165 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10165 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:44:50.476  INFO 10165 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:44:50.533  INFO 10165 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:44:50 CST 2018]; root of context hierarchy
+2018-12-19 19:44:51.778  INFO 10165 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:44:51.794  INFO 10165 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:44:51.795  INFO 10165 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:44:51.910  INFO 10165 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:44:51.910  INFO 10165 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1380 ms
+2018-12-19 19:44:52.156  INFO 10165 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:44:52.158  INFO 10165 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:44:52.162  INFO 10165 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:44:52.163  INFO 10165 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:44:52.163  INFO 10165 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:44:52.163  INFO 10165 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:44:52.163  INFO 10165 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:44:52.550  INFO 10165 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:44:50 CST 2018]; root of context hierarchy
+2018-12-19 19:44:52.618  INFO 10165 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:44:52.621  INFO 10165 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:44:52.621  INFO 10165 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:44:52.649  INFO 10165 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:44:52.649  INFO 10165 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:44:52.686  INFO 10165 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:44:53.492  INFO 10165 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:44:53.494  INFO 10165 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:44:53.498  INFO 10165 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:44:53.563  INFO 10165 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:44:53.568  INFO 10165 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.575 seconds (JVM running for 14.116)
+2018-12-19 19:44:53.568  INFO 10165 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:45:12.821  INFO 10165 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:45:12.821  INFO 10165 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:45:12.841  INFO 10165 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 19:45:12.876  INFO 10165 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:45:12.880  INFO 10165 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:45:12.996  INFO 10165 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 70 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 19:45:13.366  INFO 10165 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:45:13.432  INFO 10165 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 37 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:45:16.109  INFO 10165 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:46:39.750  INFO 10165 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:44:50 CST 2018]; root of context hierarchy
+2018-12-19 19:46:39.756  INFO 10165 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:46:39.756  INFO 10165 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:52:51.826  INFO 10229 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10229 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:52:51.831  INFO 10229 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:52:51.890  INFO 10229 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:52:51 CST 2018]; root of context hierarchy
+2018-12-19 19:52:53.149  INFO 10229 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:52:53.165  INFO 10229 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:52:53.166  INFO 10229 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:52:53.283  INFO 10229 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:52:53.283  INFO 10229 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1396 ms
+2018-12-19 19:52:53.542  INFO 10229 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:52:53.543  INFO 10229 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:52:53.547  INFO 10229 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:52:53.548  INFO 10229 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:52:53.548  INFO 10229 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:52:53.548  INFO 10229 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:52:53.548  INFO 10229 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:52:53.947  INFO 10229 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:52:51 CST 2018]; root of context hierarchy
+2018-12-19 19:52:54.017  INFO 10229 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:52:54.020  INFO 10229 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:52:54.021  INFO 10229 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:52:54.050  INFO 10229 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:52:54.050  INFO 10229 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:52:54.087  INFO 10229 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:52:54.859  INFO 10229 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:52:54.861  INFO 10229 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:52:54.865  INFO 10229 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:52:54.932  INFO 10229 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:52:54.937  INFO 10229 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.574 seconds (JVM running for 14.018)
+2018-12-19 19:52:54.938  INFO 10229 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:54:02.081  INFO 10229 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:54:02.081  INFO 10229 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:54:02.101  INFO 10229 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 19:54:02.133  INFO 10229 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:54:02.136  INFO 10229 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:54:02.232  INFO 10229 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 57 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 19:54:02.560  INFO 10229 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:54:02.619  INFO 10229 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 34 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:54:05.877  INFO 10229 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:54:45.997  INFO 10229 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:52:51 CST 2018]; root of context hierarchy
+2018-12-19 19:54:45.998  INFO 10229 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:54:45.999  INFO 10229 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:55:19.457  INFO 10254 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10254 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:55:19.462  INFO 10254 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:55:19.518  INFO 10254 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:55:19 CST 2018]; root of context hierarchy
+2018-12-19 19:55:20.710  INFO 10254 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:55:20.728  INFO 10254 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:55:20.729  INFO 10254 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:55:20.845  INFO 10254 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:55:20.846  INFO 10254 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1330 ms
+2018-12-19 19:55:21.085  INFO 10254 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:55:21.086  INFO 10254 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:55:21.090  INFO 10254 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:55:21.090  INFO 10254 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:55:21.090  INFO 10254 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:55:21.090  INFO 10254 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:55:21.091  INFO 10254 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:55:21.468  INFO 10254 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:55:19 CST 2018]; root of context hierarchy
+2018-12-19 19:55:21.532  INFO 10254 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:55:21.535  INFO 10254 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:55:21.536  INFO 10254 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:55:21.566  INFO 10254 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:55:21.566  INFO 10254 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:55:21.603  INFO 10254 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:55:22.340  INFO 10254 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:55:22.342  INFO 10254 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:55:22.345  INFO 10254 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:55:22.411  INFO 10254 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:55:22.416  INFO 10254 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.441 seconds (JVM running for 13.85)
+2018-12-19 19:55:22.416  INFO 10254 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:55:28.649  INFO 10254 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:55:28.649  INFO 10254 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:55:28.672  INFO 10254 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-12-19 19:55:28.708  INFO 10254 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:55:28.711  INFO 10254 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:55:28.808  INFO 10254 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 60 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 19:55:29.124  INFO 10254 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:55:29.182  INFO 10254 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 32 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:55:32.721  INFO 10254 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 19:56:30.897  INFO 10254 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:55:19 CST 2018]; root of context hierarchy
+2018-12-19 19:56:30.898  INFO 10254 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 19:56:30.899  INFO 10254 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 19:57:40.535  INFO 10274 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10274 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 19:57:40.544  INFO 10274 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 19:57:40.601  INFO 10274 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:57:40 CST 2018]; root of context hierarchy
+2018-12-19 19:57:41.910  INFO 10274 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 19:57:41.927  INFO 10274 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 19:57:41.928  INFO 10274 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 19:57:42.047  INFO 10274 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 19:57:42.047  INFO 10274 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1448 ms
+2018-12-19 19:57:42.294  INFO 10274 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 19:57:42.296  INFO 10274 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 19:57:42.299  INFO 10274 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 19:57:42.300  INFO 10274 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 19:57:42.300  INFO 10274 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 19:57:42.301  INFO 10274 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 19:57:42.301  INFO 10274 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 19:57:42.702  INFO 10274 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:57:40 CST 2018]; root of context hierarchy
+2018-12-19 19:57:42.773  INFO 10274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 19:57:42.776  INFO 10274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 19:57:42.776  INFO 10274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 19:57:42.806  INFO 10274 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:57:42.807  INFO 10274 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:57:42.844  INFO 10274 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 19:57:43.699  INFO 10274 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 19:57:43.700  INFO 10274 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 19:57:43.705  INFO 10274 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 19:57:43.776  INFO 10274 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 19:57:43.781  INFO 10274 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.68 seconds (JVM running for 14.1)
+2018-12-19 19:57:43.782  INFO 10274 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 19:58:36.483  INFO 10274 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 19:58:36.483  INFO 10274 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 19:58:36.504  INFO 10274 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2018-12-19 19:58:36.540  INFO 10274 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 19:58:36.544  INFO 10274 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 19:58:36.656  INFO 10274 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 69 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 19:58:37.043  INFO 10274 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 19:58:37.115  INFO 10274 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 40 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 19:58:40.271  INFO 10274 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 20:00:06.347  INFO 10274 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 19:57:40 CST 2018]; root of context hierarchy
+2018-12-19 20:00:06.349  INFO 10274 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 20:00:06.349  INFO 10274 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 20:00:48.929  INFO 10301 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10301 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 20:00:48.934  INFO 10301 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 20:00:48.998  INFO 10301 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:00:48 CST 2018]; root of context hierarchy
+2018-12-19 20:00:50.246  INFO 10301 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 20:00:50.264  INFO 10301 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 20:00:50.265  INFO 10301 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 20:00:50.386  INFO 10301 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 20:00:50.387  INFO 10301 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1392 ms
+2018-12-19 20:00:50.625  INFO 10301 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 20:00:50.626  INFO 10301 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 20:00:50.630  INFO 10301 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 20:00:50.631  INFO 10301 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 20:00:50.631  INFO 10301 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 20:00:50.631  INFO 10301 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 20:00:50.631  INFO 10301 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 20:00:51.015  INFO 10301 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:00:48 CST 2018]; root of context hierarchy
+2018-12-19 20:00:51.090  INFO 10301 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 20:00:51.093  INFO 10301 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 20:00:51.094  INFO 10301 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 20:00:51.126  INFO 10301 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:00:51.126  INFO 10301 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:00:51.165  INFO 10301 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:00:52.004  INFO 10301 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 20:00:52.005  INFO 10301 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 20:00:52.009  INFO 10301 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 20:00:52.079  INFO 10301 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 20:00:52.085  INFO 10301 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.6 seconds (JVM running for 14.002)
+2018-12-19 20:00:52.085  INFO 10301 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 20:00:56.545  INFO 10301 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 20:00:56.545  INFO 10301 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 20:00:56.565  INFO 10301 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 20:00:56.598  INFO 10301 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 20:00:56.602  INFO 10301 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 20:00:56.706  INFO 10301 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 63 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 20:00:57.024  INFO 10301 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 20:00:57.083  INFO 10301 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 34 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 20:01:00.688  INFO 10301 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 20:01:24.166  INFO 10301 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:00:48 CST 2018]; root of context hierarchy
+2018-12-19 20:01:24.168  INFO 10301 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 20:01:24.169  INFO 10301 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 20:01:48.679  INFO 10313 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10313 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 20:01:48.685  INFO 10313 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 20:01:48.742  INFO 10313 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:01:48 CST 2018]; root of context hierarchy
+2018-12-19 20:01:49.965  INFO 10313 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 20:01:49.982  INFO 10313 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 20:01:49.983  INFO 10313 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 20:01:50.103  INFO 10313 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 20:01:50.104  INFO 10313 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1365 ms
+2018-12-19 20:01:50.408  INFO 10313 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 20:01:50.411  INFO 10313 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 20:01:50.416  INFO 10313 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 20:01:50.418  INFO 10313 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 20:01:50.419  INFO 10313 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 20:01:50.419  INFO 10313 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 20:01:50.419  INFO 10313 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 20:01:50.858  INFO 10313 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:01:48 CST 2018]; root of context hierarchy
+2018-12-19 20:01:50.925  INFO 10313 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 20:01:50.928  INFO 10313 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 20:01:50.928  INFO 10313 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 20:01:50.953  INFO 10313 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:01:50.953  INFO 10313 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:01:50.988  INFO 10313 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:01:51.791  INFO 10313 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 20:01:51.793  INFO 10313 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 20:01:51.798  INFO 10313 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 20:01:51.865  INFO 10313 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 20:01:51.872  INFO 10313 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.639 seconds (JVM running for 14.062)
+2018-12-19 20:01:51.872  INFO 10313 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 20:02:00.490  INFO 10313 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 20:02:00.490  INFO 10313 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 20:02:00.511  INFO 10313 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2018-12-19 20:02:00.547  INFO 10313 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 20:02:00.550  INFO 10313 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 20:02:00.659  INFO 10313 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 67 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 20:02:01.006  INFO 10313 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 20:02:01.071  INFO 10313 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 35 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 20:02:04.964  INFO 10313 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 20:05:45.260  INFO 10313 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:01:48 CST 2018]; root of context hierarchy
+2018-12-19 20:05:45.263  INFO 10313 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 20:05:45.263  INFO 10313 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 20:06:10.431  INFO 10423 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10423 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 20:06:10.437  INFO 10423 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 20:06:10.493  INFO 10423 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:06:10 CST 2018]; root of context hierarchy
+2018-12-19 20:06:11.696  INFO 10423 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 20:06:11.713  INFO 10423 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 20:06:11.714  INFO 10423 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 20:06:11.822  INFO 10423 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 20:06:11.823  INFO 10423 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1333 ms
+2018-12-19 20:06:12.061  INFO 10423 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 20:06:12.062  INFO 10423 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 20:06:12.066  INFO 10423 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 20:06:12.067  INFO 10423 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 20:06:12.067  INFO 10423 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 20:06:12.067  INFO 10423 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 20:06:12.068  INFO 10423 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 20:06:12.438  INFO 10423 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:06:10 CST 2018]; root of context hierarchy
+2018-12-19 20:06:12.504  INFO 10423 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 20:06:12.507  INFO 10423 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 20:06:12.507  INFO 10423 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 20:06:12.535  INFO 10423 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:06:12.535  INFO 10423 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:06:12.570  INFO 10423 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:06:13.292  INFO 10423 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 20:06:13.293  INFO 10423 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 20:06:13.297  INFO 10423 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 20:06:13.362  INFO 10423 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 20:06:13.367  INFO 10423 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.352 seconds (JVM running for 13.757)
+2018-12-19 20:06:13.367  INFO 10423 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 20:06:16.889  INFO 10423 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 20:06:16.889  INFO 10423 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 20:06:16.908  INFO 10423 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-12-19 20:06:16.940  INFO 10423 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 20:06:16.943  INFO 10423 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 20:06:17.044  INFO 10423 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 59 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 20:06:17.413  INFO 10423 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 20:06:17.486  INFO 10423 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 40 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 20:06:20.112  INFO 10423 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 20:08:02.673  INFO 10423 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:06:10 CST 2018]; root of context hierarchy
+2018-12-19 20:08:02.675  INFO 10423 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 20:08:02.675  INFO 10423 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 20:08:26.230  INFO 10449 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10449 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 20:08:26.235  INFO 10449 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 20:08:26.293  INFO 10449 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:08:26 CST 2018]; root of context hierarchy
+2018-12-19 20:08:27.501  INFO 10449 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 20:08:27.517  INFO 10449 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 20:08:27.518  INFO 10449 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 20:08:27.632  INFO 10449 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 20:08:27.633  INFO 10449 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1343 ms
+2018-12-19 20:08:27.887  INFO 10449 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 20:08:27.888  INFO 10449 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 20:08:27.892  INFO 10449 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 20:08:27.892  INFO 10449 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 20:08:27.893  INFO 10449 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 20:08:27.893  INFO 10449 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 20:08:27.893  INFO 10449 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 20:08:28.279  INFO 10449 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:08:26 CST 2018]; root of context hierarchy
+2018-12-19 20:08:28.343  INFO 10449 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 20:08:28.346  INFO 10449 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 20:08:28.347  INFO 10449 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 20:08:28.376  INFO 10449 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:08:28.376  INFO 10449 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:08:28.411  INFO 10449 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:08:29.269  INFO 10449 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 20:08:29.271  INFO 10449 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 20:08:29.275  INFO 10449 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 20:08:29.343  INFO 10449 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 20:08:29.348  INFO 10449 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.59 seconds (JVM running for 14.029)
+2018-12-19 20:08:29.348  INFO 10449 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 20:08:32.629  INFO 10449 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 20:08:32.629  INFO 10449 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 20:08:32.649  INFO 10449 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-12-19 20:08:32.682  INFO 10449 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 20:08:32.685  INFO 10449 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 20:08:32.779  INFO 10449 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 55 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 20:08:33.097  INFO 10449 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 20:08:33.155  INFO 10449 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 31 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 20:08:36.323  INFO 10449 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 20:09:03.293  INFO 10449 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:08:26 CST 2018]; root of context hierarchy
+2018-12-19 20:09:03.296  INFO 10449 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 20:09:03.296  INFO 10449 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 20:09:28.697  INFO 10460 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10460 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 20:09:28.702  INFO 10460 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 20:09:28.758  INFO 10460 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:09:28 CST 2018]; root of context hierarchy
+2018-12-19 20:09:29.972  INFO 10460 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 20:09:29.987  INFO 10460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 20:09:29.989  INFO 10460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 20:09:30.096  INFO 10460 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 20:09:30.097  INFO 10460 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1342 ms
+2018-12-19 20:09:30.327  INFO 10460 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 20:09:30.328  INFO 10460 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 20:09:30.332  INFO 10460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 20:09:30.333  INFO 10460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 20:09:30.333  INFO 10460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 20:09:30.333  INFO 10460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 20:09:30.333  INFO 10460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 20:09:30.736  INFO 10460 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:09:28 CST 2018]; root of context hierarchy
+2018-12-19 20:09:30.807  INFO 10460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 20:09:30.809  INFO 10460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 20:09:30.810  INFO 10460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 20:09:30.840  INFO 10460 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:09:30.840  INFO 10460 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:09:30.878  INFO 10460 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:09:31.707  INFO 10460 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 20:09:31.709  INFO 10460 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 20:09:31.713  INFO 10460 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 20:09:31.786  INFO 10460 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 20:09:31.791  INFO 10460 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.51 seconds (JVM running for 13.92)
+2018-12-19 20:09:31.791  INFO 10460 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 20:09:38.692  INFO 10460 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 20:09:38.692  INFO 10460 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 20:09:38.711  INFO 10460 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-12-19 20:09:38.745  INFO 10460 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 20:09:38.748  INFO 10460 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 20:09:38.849  INFO 10460 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 60 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 20:09:39.184  INFO 10460 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 20:09:39.244  INFO 10460 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 35 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 20:09:42.430  INFO 10460 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 20:10:03.436  INFO 10460 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:09:28 CST 2018]; root of context hierarchy
+2018-12-19 20:10:03.438  INFO 10460 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 20:10:03.438  INFO 10460 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 20:10:29.447  INFO 10472 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10472 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 20:10:29.453  INFO 10472 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 20:10:29.511  INFO 10472 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:10:29 CST 2018]; root of context hierarchy
+2018-12-19 20:10:30.979  INFO 10472 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 20:10:30.996  INFO 10472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 20:10:30.997  INFO 10472 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 20:10:31.109  INFO 10472 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 20:10:31.109  INFO 10472 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1601 ms
+2018-12-19 20:10:31.378  INFO 10472 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 20:10:31.380  INFO 10472 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 20:10:31.384  INFO 10472 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 20:10:31.384  INFO 10472 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 20:10:31.384  INFO 10472 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 20:10:31.385  INFO 10472 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 20:10:31.385  INFO 10472 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 20:10:31.744  INFO 10472 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:10:29 CST 2018]; root of context hierarchy
+2018-12-19 20:10:31.813  INFO 10472 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 20:10:31.815  INFO 10472 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 20:10:31.816  INFO 10472 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 20:10:31.846  INFO 10472 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:10:31.846  INFO 10472 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:10:31.884  INFO 10472 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:10:32.686  INFO 10472 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 20:10:32.687  INFO 10472 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 20:10:32.692  INFO 10472 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 20:10:32.758  INFO 10472 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 20:10:32.763  INFO 10472 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.75 seconds (JVM running for 14.173)
+2018-12-19 20:10:32.763  INFO 10472 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 20:10:43.659  INFO 10472 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 20:10:43.660  INFO 10472 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 20:10:43.680  INFO 10472 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-12-19 20:10:43.714  INFO 10472 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 20:10:43.717  INFO 10472 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 20:10:43.821  INFO 10472 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 61 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 20:10:44.158  INFO 10472 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 20:10:44.219  INFO 10472 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 34 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 20:10:46.859  INFO 10472 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 20:17:48.562  INFO 10472 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:10:29 CST 2018]; root of context hierarchy
+2018-12-19 20:17:48.564  INFO 10472 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 20:17:48.565  INFO 10472 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 20:18:13.192  INFO 10529 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10529 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 20:18:13.197  INFO 10529 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 20:18:13.255  INFO 10529 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:18:13 CST 2018]; root of context hierarchy
+2018-12-19 20:18:14.463  INFO 10529 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 20:18:14.478  INFO 10529 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 20:18:14.479  INFO 10529 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 20:18:14.590  INFO 10529 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 20:18:14.591  INFO 10529 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1339 ms
+2018-12-19 20:18:14.814  INFO 10529 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 20:18:14.815  INFO 10529 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 20:18:14.819  INFO 10529 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 20:18:14.819  INFO 10529 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 20:18:14.820  INFO 10529 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 20:18:14.820  INFO 10529 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 20:18:14.820  INFO 10529 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 20:18:15.190  INFO 10529 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:18:13 CST 2018]; root of context hierarchy
+2018-12-19 20:18:15.256  INFO 10529 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 20:18:15.259  INFO 10529 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 20:18:15.260  INFO 10529 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 20:18:15.288  INFO 10529 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:18:15.288  INFO 10529 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:18:15.324  INFO 10529 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:18:16.078  INFO 10529 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 20:18:16.079  INFO 10529 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 20:18:16.083  INFO 10529 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 20:18:16.150  INFO 10529 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 20:18:16.155  INFO 10529 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.385 seconds (JVM running for 13.796)
+2018-12-19 20:18:16.155  INFO 10529 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 20:18:26.760  INFO 10529 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 20:18:26.761  INFO 10529 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 20:18:26.780  INFO 10529 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-12-19 20:18:26.811  INFO 10529 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 20:18:26.814  INFO 10529 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 20:18:26.909  INFO 10529 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 58 ms to scan 2 urls, producing 44 keys and 187 values 
+2018-12-19 20:18:27.234  INFO 10529 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 20:18:27.299  INFO 10529 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 37 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 20:18:32.106  INFO 10529 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!
+2018-12-19 20:19:56.338  INFO 10529 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:18:13 CST 2018]; root of context hierarchy
+2018-12-19 20:19:56.340  INFO 10529 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-12-19 20:19:56.340  INFO 10529 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-12-19 20:25:58.909  INFO 10611 --- [main] c.e.demo.SpidersApplication$Companion    : Starting SpidersApplication.Companion on FinupdeMacBook-Pro-96.local with PID 10611 (/Users/finup/spiders/target/classes started by finup in /Users/finup/spiders)
+2018-12-19 20:25:58.914  INFO 10611 --- [main] c.e.demo.SpidersApplication$Companion    : No active profile set, falling back to default profiles: default
+2018-12-19 20:25:58.976  INFO 10611 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:25:58 CST 2018]; root of context hierarchy
+2018-12-19 20:26:00.241  INFO 10611 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 30918 (http)
+2018-12-19 20:26:00.257  INFO 10611 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-19 20:26:00.258  INFO 10611 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-12-19 20:26:00.367  INFO 10611 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-19 20:26:00.367  INFO 10611 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1394 ms
+2018-12-19 20:26:00.608  INFO 10611 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-19 20:26:00.610  INFO 10611 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-12-19 20:26:00.614  INFO 10611 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-19 20:26:00.614  INFO 10611 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-19 20:26:00.615  INFO 10611 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-19 20:26:00.615  INFO 10611 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-19 20:26:00.615  INFO 10611 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-12-19 20:26:00.988  INFO 10611 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3576ddc2: startup date [Wed Dec 19 20:25:58 CST 2018]; root of context hierarchy
+2018-12-19 20:26:01.069  INFO 10611 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spiders/realtyInfo],methods=[GET]}" onto public final java.lang.String com.example.demo.controller.SpidersController.realtyInfo()
+2018-12-19 20:26:01.072  INFO 10611 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-19 20:26:01.073  INFO 10611 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-19 20:26:01.100  INFO 10611 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:26:01.101  INFO 10611 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:26:01.135  INFO 10611 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-19 20:26:01.957  INFO 10611 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-19 20:26:01.959  INFO 10611 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-19 20:26:01.962  INFO 10611 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-19 20:26:02.029  INFO 10611 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 30918 (http)
+2018-12-19 20:26:02.033  INFO 10611 --- [main] c.e.demo.SpidersApplication$Companion    : Started SpidersApplication.Companion in 13.593 seconds (JVM running for 14.052)
+2018-12-19 20:26:02.034  INFO 10611 --- [main] com.example.demo.SpidersApplication      : Boot Server started.
+2018-12-19 20:26:16.083  INFO 10611 --- [http-nio-30918-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-19 20:26:16.083  INFO 10611 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-19 20:26:16.101  INFO 10611 --- [http-nio-30918-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2018-12-19 20:26:16.134  INFO 10611 --- [http-nio-30918-exec-1] c.e.d.s.impl.RealtyDataServiceImpl       : 爬取数据-------------start
+2018-12-19 20:26:16.136  INFO 10611 --- [GeccoEngine] c.g.gecco.downloader.proxy.FileProxys    : proxys not load
+2018-12-19 20:26:16.237  INFO 10611 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 61 ms to scan 2 urls, producing 44 keys and 185 values 
+2018-12-19 20:26:16.587  INFO 10611 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : starts.json not found
+2018-12-19 20:26:16.667  INFO 10611 --- [GeccoEngine] org.reflections.Reflections              : Reflections took 48 ms to scan 1 urls, producing 3 keys and 6 values 
+2018-12-19 20:26:19.722  INFO 10611 --- [GeccoEngine] com.geccocrawler.gecco.GeccoEngine       : close gecco!

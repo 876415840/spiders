@@ -10,6 +10,7 @@ import ${importStr};
  *
  * @author 系统生成
  */
-public interface ${poName}Mapper extends TkMapper<${poName}> {
+@Mapper
+public interface ${poName}Mapper {
 
 }

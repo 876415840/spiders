@@ -61,6 +61,12 @@
             <version>3.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version><!--$NO-MVN-MAN-VER$ -->
+        </dependency>
+
         <!-- druid -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -90,6 +96,13 @@
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.3</version>
+        </dependency>
+
+        <!-- gecco爬虫 -->
+        <dependency>
+            <groupId>com.geccocrawler</groupId>
+            <artifactId>gecco</artifactId>
+            <version>1.3.0</version>
         </dependency>
 
         <dependency>

@@ -1,12 +1,9 @@
 package com.example.demo.service.impl
 
-import com.alibaba.fastjson.JSON
-import com.example.demo.entity.User
-import com.example.demo.mapper.UserMapper
 import com.example.demo.service.RealtyDataService
+import com.geccocrawler.gecco.GeccoEngine
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 /**
@@ -20,8 +17,7 @@ class RealtyDataServiceImpl : RealtyDataService {
 
     private val LOGGER: Logger = LoggerFactory.getLogger(RealtyDataServiceImpl::class.java)
 
-    @Autowired
-    lateinit var userMapper: UserMapper
+
 
     /**
      * @Description: 爬取数据
@@ -31,8 +27,19 @@ class RealtyDataServiceImpl : RealtyDataService {
      * @return: 
      */
     override fun spiderData() {
-        var user: User  = userMapper.getUserById(1)
-        LOGGER.info("爬取数据-------------{}", JSON.toJSONString(user))
+        GeccoEngine.create()
+                // 工程的包路径
+                .classpath("com.example.demo.crawler")
+                // 开始抓取的页面地址
+                .start("https://bj.lianjia.com/ershoufang/pg1/")
+                // 开启几个爬虫线程
+                .thread(1)
+                // 单个爬虫每次抓取完一个请求后的间隔时间
+                .interval(2000)
+                //.loop(true) 是否循环抓取默认false
+                //.mobile(false) 表示使用移动端还是pc端的UserAgent。默认为false使用pc端的UserAgent
+                .start() // start 非阻塞启动  run 阻塞启动
+        LOGGER.info("爬取数据-------------start")
     }
 
 }
