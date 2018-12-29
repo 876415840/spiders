@@ -4,7 +4,11 @@ import com.example.demo.service.RealtyDataService
 import com.geccocrawler.gecco.GeccoEngine
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import com.geccocrawler.gecco.pipeline.PipelineFactory
+
+
 
 /**
  * @Description 房地产数据接口实现
@@ -17,23 +21,24 @@ class RealtyDataServiceImpl : RealtyDataService {
 
     private val LOGGER: Logger = LoggerFactory.getLogger(RealtyDataServiceImpl::class.java)
 
-
+    @Autowired lateinit var springPipelineFactory: PipelineFactory
 
     /**
      * @Description: 爬取数据
      * @author mengqinghao
      * @param:
      * @date 2018/11/19 3:54 PM
-     * @return: 
+     * @return:
      */
     override fun spiderData() {
         GeccoEngine.create()
+                .pipelineFactory(springPipelineFactory)
                 // 工程的包路径
                 .classpath("com.example.demo.crawler")
                 // 开始抓取的页面地址
                 .start("https://bj.lianjia.com/ershoufang/pg1/")
                 // 开启几个爬虫线程
-                .thread(1)
+                .thread(10)
                 // 单个爬虫每次抓取完一个请求后的间隔时间
                 .interval(2000)
                 //.loop(true) 是否循环抓取默认false

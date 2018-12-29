@@ -1,5 +1,7 @@
 package com.example.demo.service
 
+import com.example.demo.crawler.SecondHandHouseInfo
+
 /**
  * @Description 房地产数据接口
  * @Author mengqinghao

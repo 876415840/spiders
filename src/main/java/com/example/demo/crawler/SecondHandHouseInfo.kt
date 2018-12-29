@@ -10,14 +10,14 @@ import com.geccocrawler.gecco.spider.HtmlBean
  * @Date 2018/12/19 5:24 PM
  * @Version 1.0
  */
-class SecendHandHouseInfo : HtmlBean {
+class SecondHandHouseInfo : HtmlBean {
 
     @HtmlField(cssPath = "div.title > a")
     var title : String? = null
 
     @Attr("data-housecode")
     @HtmlField(cssPath = "div.title > a")
-    var housecode : String? = null
+    var houseCode : String? = null
 
     @HtmlField(cssPath = "div.title > span")
     var type : String? = null
@@ -28,8 +28,12 @@ class SecendHandHouseInfo : HtmlBean {
     @HtmlField(cssPath = "div.flood > div.positionInfo")
     var positionInfo : String? = null
 
-    @HtmlField(cssPath = "div.followInfo > div.tag")
-    var tag : String? = null
+    @Attr("class")
+    @HtmlField(cssPath = "div.followInfo > div.tag > span")
+    var tag : List<String>? = null
+
+    @HtmlField(cssPath = "div.followInfo > div.tag > span")
+    var tagName : List<String>? = null
 
     @HtmlField(cssPath = "div.followInfo > div.priceInfo > div.totalPrice")
     var totalPrice : String? = null

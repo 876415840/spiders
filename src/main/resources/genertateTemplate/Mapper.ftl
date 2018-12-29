@@ -5,6 +5,7 @@ package ${packagePath};
 import ${importStr};
 	</#if>
 </#list>
+import tk.mybatis.mapper.common.Mapper;
 
 /**
  *

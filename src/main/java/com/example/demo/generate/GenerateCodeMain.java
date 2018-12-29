@@ -17,7 +17,7 @@ public class GenerateCodeMain {
 
         try {
             // 把你的表名放在这
-            String[] tables = {"user"};
+            String[] tables = {"house_info"};
 
             for (String tableName : tables) {
                 putDaoFile(tableName); //在dao项目中 生成PO/VO/mapper

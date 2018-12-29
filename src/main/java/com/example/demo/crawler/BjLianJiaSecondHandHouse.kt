@@ -20,5 +20,5 @@ class BjLianJiaSecondHandHouse : HtmlBean {
     var request : HttpRequest? = null
 
     @HtmlField(cssPath = "ul.sellListContent > li")
-    var houseInfoList : List<SecendHandHouseInfo>? = null
+    var houseInfoList : List<SecondHandHouseInfo>? = null
 }
