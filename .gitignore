@@ -10,7 +10,28 @@ springboot.log
 .settings
 .springBeans
 
-### IntelliJ IDEA ###
+### Maven template
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+
+*.iml
+out
+gen
+logs/puhui-lend.log
+.classpath
+.project
+.settings/
 .idea
 *.iws
 *.iml
@@ -23,5 +44,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-
-logger.log debug
