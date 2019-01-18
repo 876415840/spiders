@@ -1,5 +1,5 @@
 server:
-  port: 30918
+  port: 8080
   useForwardHeaders: true
   tomcat:
     uriEncoding: UTF-8
