@@ -4,8 +4,8 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 import java.io.Serializable
-import java.util.Objects
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder
+import java.util.*
 
 /**
  * HouseInfo实体
@@ -114,6 +114,15 @@ class HouseInfo : Serializable {
      * 是否随时看房
      */
     var anyTime: Int? = null
+
+    /**
+     * 创建时间
+     */
+    var createTime: Date? = null
+    /**
+     * 更新时间
+     */
+    var updateTime: Date? = null
 
     companion object {
         /**
