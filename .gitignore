@@ -45,4 +45,4 @@ dist/
 nbdist/
 .nb-gradle/
 
-logger.log debug
+logger.log
