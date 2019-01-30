@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController
 class SpidersController {
 
     @GetMapping("/realtyInfo")
-    fun realtyInfo(@PathVariable("code") code : String): String {
+    fun realtyInfo(): String {
 
         return "nothing"
     }
