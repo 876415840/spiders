@@ -4,6 +4,7 @@ import com.example.demo.service.RealtyDataService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Component
+import java.util.*
 
 /**
  * @Description TODO
@@ -23,7 +24,7 @@ class TimedTask {
      * @date 2018/12/24 7:26 PM
      * @return: 
      */
-    @Scheduled(cron = "0 0/5 * * * ?")
+    @Scheduled(cron = "0 0 0 * * ?")
     fun WeeHours() {
         realtyDataService.spiderData()
     }
