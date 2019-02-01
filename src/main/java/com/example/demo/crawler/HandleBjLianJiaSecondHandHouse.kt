@@ -1,12 +1,12 @@
 package com.example.demo.crawler
 
-import com.alibaba.fastjson.JSON
 import com.example.demo.entity.HouseInfo
+import com.example.demo.entity.PriceChange
 import com.example.demo.mapper.HouseInfoMapper
+import com.example.demo.mapper.PriceChangeMapper
 import com.geccocrawler.gecco.pipeline.Pipeline
 import com.geccocrawler.gecco.scheduler.SchedulerContext
 import org.apache.commons.collections.CollectionUtils
-import org.apache.commons.lang3.BooleanUtils
 import org.apache.commons.lang3.StringUtils
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -25,6 +25,9 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
     @Autowired
     lateinit var houseInfoMapper: HouseInfoMapper
 
+    @Autowired
+    lateinit var priceChangeMapper: PriceChangeMapper
+
     /**
      * @Description: 处理抓取内容
      * @author mengqinghao
@@ -35,19 +38,33 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
     override fun process(secondHandHouse: BjLianJiaSecondHandHouse?) {
         var houseInfoList : List<SecondHandHouseInfo>? = secondHandHouse!!.houseInfoList
         if(CollectionUtils.isNotEmpty(houseInfoList)){
-            for (i in houseInfoList!!.indices){
-                var houseCode : String = houseInfoList[i]!!.houseCode!!
-                if(StringUtils.isBlank(houseCode)){
-                    throw RuntimeException()
+            try {
+                for (i in houseInfoList!!.indices){
+                    var houseCode : String = houseInfoList[i]!!.houseCode!!
+                    if(StringUtils.isBlank(houseCode)){
+                        throw RuntimeException()
+                    }
+                    var houseInfo = getHouseInfo(houseInfoList[i])
+                    var oldHouseInfo = houseInfoMapper.getByCode(houseInfoList[i].houseCode!!)
+                    if(oldHouseInfo != null){
+                        houseInfoMapper.updateByCode(houseInfo)
+                        if (!Objects.equals(houseInfo.totalPrice, oldHouseInfo.totalPrice) || Objects.equals(houseInfo.unitPrice, oldHouseInfo.unitPrice)){
+                            var now = Date()
+                            var priceChange = PriceChange()
+                            priceChange.houseCode = oldHouseInfo.code
+                            priceChange.totalPrice = oldHouseInfo.totalPrice
+                            priceChange.unitPrice = oldHouseInfo.unitPrice
+                            priceChange.createTime = now
+                            priceChange.updateTime = now
+                            priceChangeMapper.save(priceChange)
+                        }
+                    }else{
+                        houseInfo.createTime = houseInfo.updateTime
+                        houseInfoMapper.save(houseInfo)
+                    }
                 }
-                var houseInfo = getHouseInfo(houseInfoList[i])
-                var oldHouseInfo = houseInfoMapper.getByCode(houseInfoList[i].houseCode!!)
-                if(oldHouseInfo != null){
-                    houseInfoMapper.updateByCode(houseInfo)
-                }else{
-                    houseInfo.createTime = houseInfo.updateTime
-                    houseInfoMapper.save(houseInfo)
-                }
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
             var url : String = secondHandHouse!!.request!!.url
             var pgIndex: Int = StringUtils.indexOf(url,"/pg")
@@ -90,6 +107,10 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
         var unitPrice = houseHtmlInfo.unitPrice!!.replace("单价", "").replace("元/平米", "")
         houseInfo.unitPrice = BigDecimal(unitPrice).toInt()
         // ["VR房源","房本满五年","随时看房"]
+        houseInfo.vr = 0
+        houseInfo.taxfree = 0
+        houseInfo.anyTime = 0
+        houseInfo.subway = 0
         for (i in houseHtmlInfo.tag!!.indices){
             var tag = houseHtmlInfo.tag!![i]
             if("vr".equals(tag)){
@@ -142,16 +163,16 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
         var positionInfos = houseHtmlInfo.positionInfo!!.split("<a")
         if(positionInfos.size == 2){
             // 楼层 年份 类型
-            var infos = positionInfos[0].split("<span class=\\\"divide\\\">/</span>")
-            var size = infos.size
+            var positionInfoArr = positionInfos[0].split("<span class=\"divide\">/</span>")
+            var size = positionInfoArr.size
             if(size >= 1){
-                houseInfo.storeyType = infos[0]
+                houseInfo.storeyType = positionInfoArr[0].trim()
             }
             if(size >= 2){
-                var towerInfo = infos[0].split("年建")
+                var towerInfo = positionInfoArr[1].split("年建")
                 if(towerInfo.size == 2){
-                    houseInfo.year = Integer.valueOf(towerInfo[0]!!)
-                    houseInfo.towerType = towerInfo[1]
+                    houseInfo.year = Integer.valueOf(towerInfo[0].trim())
+                    houseInfo.towerType = towerInfo[1].trim()
                 }
             }
             houseInfo.area = positionInfos[1].substring(positionInfos[1].indexOf(">") + 1).replace("</a>","").trim()
