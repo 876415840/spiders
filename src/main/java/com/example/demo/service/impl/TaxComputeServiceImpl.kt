@@ -46,5 +46,32 @@ class TaxComputeServiceImpl: TaxComputeService {
         var tax = price.multiply(BigDecimal(taxLevelEnum!!.tax)).divide(BigDecimal(100))
         tax = tax.setScale(2,BigDecimal.ROUND_HALF_UP)
         return tax
+
+
+//        int val = 0;
+//        int other = 0;
+//        BigDecimal d = BigDecimal.valueOf(100L);
+//        for (int i = 1; i <= 8; i++) {
+//            int amount = (3220000 * i) - (500000 * i) - (554000 * i);
+//            String level = "";
+//            if (amount <= 3600000) {
+//                val = new BigDecimal(amount * 3).divide(d).intValue();
+//                other += val;
+//                level = "一";
+//            } else if (amount > 3600000 && amount <= 14400000) {
+//                val = new BigDecimal(amount * 10).divide(d).intValue() - 252000 - other;
+//                other += val;
+//                level = "二";
+//            } else if (amount > 14400000 && amount <= 30000000) {
+//                val = new BigDecimal(amount * 20).divide(d).intValue() - 1692000 - other;
+//                other += val;
+//                level = "三";
+//            } else if (amount > 30000000 && amount <= 42000000) {
+//                val = new BigDecimal(amount * 25).divide(d).intValue() - 3192000 - other;
+//                other += val;
+//                level = "四";
+//            }
+//            System.out.println("级别："+level+", 值："+val/100);
+//        }
     }
 }
