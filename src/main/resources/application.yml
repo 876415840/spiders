@@ -8,9 +8,9 @@ server:
 
 spring:
   datasource:
-    url: ${db.url}
-    username: ${db.username}
-    password: ${db.password}
+    url: @db.url@
+    username: @db.username@
+    password: @db.password@
     driverClassName: com.mysql.jdbc.Driver
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
