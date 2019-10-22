@@ -37,12 +37,6 @@
 			<scope>test</scope>
 		</dependency>
 
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.29</version>
-        </dependency>
-
         <!-- 自动生成代码 -->
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
@@ -163,6 +157,22 @@
     </dependencies>
 
 	<build>
+        <resources>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.yml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -222,17 +232,9 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <db.url>jdbc:mysql://47.105.185.111:3306/spiders</db.url>
-                <db.username>root</db.username>
-                <db.password>!QAZ1qaz</db.password>
-            </properties>
-        </profile>
-        <profile>
-            <id>product</id>
-            <properties>
                 <db.url>jdbc:mysql://localhost:3306/spiders</db.url>
-                <db.username>root</db.username>
-                <db.password>!QAZ1qaz</db.password>
+                <db.username>username</db.username>
+                <db.password>password</db.password>
             </properties>
         </profile>
     </profiles>
