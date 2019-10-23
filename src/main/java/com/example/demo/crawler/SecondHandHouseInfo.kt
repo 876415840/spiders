@@ -25,19 +25,19 @@ class SecondHandHouseInfo : HtmlBean {
     @HtmlField(cssPath = "div.address > div.houseInfo")
     var houseInfo : String? = null
 
-    @HtmlField(cssPath = "div.flood > div.positionInfo")
-    var positionInfo : String? = null
+    @HtmlField(cssPath = "div.flood > div.positionInfo > a")
+    var positionInfo : List<String>? = null
 
     @Attr("class")
-    @HtmlField(cssPath = "div.followInfo > div.tag > span")
+    @HtmlField(cssPath = "div.tag > span")
     var tag : List<String>? = null
 
     @HtmlField(cssPath = "div.followInfo > div.tag > span")
     var tagName : List<String>? = null
 
-    @HtmlField(cssPath = "div.followInfo > div.priceInfo > div.totalPrice")
+    @HtmlField(cssPath = "div.priceInfo > div.totalPrice")
     var totalPrice : String? = null
 
-    @HtmlField(cssPath = "div.followInfo > div.priceInfo > div.unitPrice > span")
+    @HtmlField(cssPath = "div.priceInfo > div.unitPrice > span")
     var unitPrice : String? = null
 }
