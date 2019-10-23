@@ -228,6 +228,11 @@
                 <db.url>jdbc:mysql://localhost:3306/spiders</db.url>
                 <db.username>username</db.username>
                 <db.password>password</db.password>
+                <redis.host>localhost</redis.host>
+                <redis.password>password</redis.password>
+                <rabbitmq.addresses>localhost:port</rabbitmq.addresses>
+                <rabbitmq.username>username</rabbitmq.username>
+                <rabbitmq.password>password</rabbitmq.password>
             </properties>
         </profile>
     </profiles>
