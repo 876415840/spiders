@@ -1,7 +1,9 @@
 package com.example.demo.crawler
 
+import com.alibaba.fastjson.JSON
 import com.example.demo.entity.HouseInfo
 import com.example.demo.entity.PriceChange
+import com.example.demo.enumerate.SingleMapEnum
 import com.example.demo.mapper.HouseInfoMapper
 import com.example.demo.mapper.PriceChangeMapper
 import com.geccocrawler.gecco.pipeline.Pipeline
@@ -24,12 +26,14 @@ import java.util.*
 @Service("bjLianJiaSecondHandHouse")
 class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
 
-    private val LOGGER: Logger = LoggerFactory.getLogger(HandleBjLianJiaSecondHandHouse::class.java)
+    private val logger: Logger = LoggerFactory.getLogger(HandleBjLianJiaSecondHandHouse::class.java)
 
     @Autowired
+    private
     lateinit var houseInfoMapper: HouseInfoMapper
 
     @Autowired
+    private
     lateinit var priceChangeMapper: PriceChangeMapper
 
     /**
@@ -42,16 +46,25 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
     override fun process(secondHandHouse: BjLianJiaSecondHandHouse?) {
         var houseInfoList : List<SecondHandHouseInfo>? = secondHandHouse!!.houseInfoList
         if(CollectionUtils.isNotEmpty(houseInfoList)){
+            var map = SingleMapEnum.SINGLE_DEMO.map
             try {
                 for (i in houseInfoList!!.indices){
-                    var secondHandHouseInfo:SecondHandHouseInfo = houseInfoList[i]
-                    var houseCode : String = secondHandHouseInfo!!.houseCode!!
+                    var secondHandHouseInfo : SecondHandHouseInfo = houseInfoList[i]
+                    var houseCode : String? = secondHandHouseInfo.houseCode
                     if(StringUtils.isBlank(houseCode)){
-                        throw RuntimeException()
+                        logger.warn("=------------------------------houseCode is null--data:{}", JSON.toJSONString(secondHandHouse))
+                        continue
+                    }
+                    var someHouseInfo : HouseInfo? = map[houseCode!!]
+                    if (someHouseInfo != null) {
+                        logger.warn("-----------------重复-------------------houseCode:{}", houseCode)
+                        continue
                     }
                     var houseInfo = getHouseInfo(secondHandHouseInfo)
-                    var oldHouseInfo = houseInfoMapper.getByCode(houseCode)
+                    map[houseCode!!] = houseInfo
+                    var oldHouseInfo = houseInfoMapper.getByCode(houseCode!!)
                     if(oldHouseInfo != null){
+                        // 价格变化
                         if (houseInfo.totalPrice != oldHouseInfo.totalPrice){
                             var now = Date()
                             var priceChange = PriceChange()
@@ -78,7 +91,7 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
             var page: Int = Integer.valueOf(index)+1
             url = StringUtils.replace(url,"/pg${index}/","/pg${page}/")
             SchedulerContext.into(secondHandHouse!!.request!!.subRequest(url))
-            LOGGER.info("爬取数据-------------{}页", index)
+            logger.info("爬取数据-------------{}页", index)
         }
     }
 

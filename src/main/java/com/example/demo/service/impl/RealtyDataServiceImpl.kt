@@ -1,5 +1,6 @@
 package com.example.demo.service.impl
 
+import com.example.demo.enumerate.SingleMapEnum
 import com.example.demo.service.RealtyDataService
 import com.geccocrawler.gecco.GeccoEngine
 import org.slf4j.Logger
@@ -31,6 +32,7 @@ class RealtyDataServiceImpl : RealtyDataService {
      * @return:
      */
     override fun spiderData() {
+        LOGGER.info("爬取数据-------------start")
         GeccoEngine.create()
                 .pipelineFactory(springPipelineFactory)
                 // 工程的包路径
@@ -43,8 +45,10 @@ class RealtyDataServiceImpl : RealtyDataService {
                 .interval(2000)
                 //.loop(true) 是否循环抓取默认false
                 //.mobile(false) 表示使用移动端还是pc端的UserAgent。默认为false使用pc端的UserAgent
-                .start() // start 非阻塞启动  run 阻塞启动
-        LOGGER.info("爬取数据-------------start")
+//                .start() // start 非阻塞启动  run 阻塞启动
+                .run()
+        SingleMapEnum.SINGLE_DEMO.map.clear()
+        LOGGER.info("爬取数据-------------end")
     }
 
 }

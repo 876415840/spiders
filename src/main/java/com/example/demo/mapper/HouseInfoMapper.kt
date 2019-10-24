@@ -21,6 +21,7 @@ interface HouseInfoMapper{
         (Result(column = "create_time",property = "createTime")),
         (Result(column = "update_time",property = "updateTime"))
     ])
+
     @Select("select * from "+ HouseInfo.TABLE_NAME +" where code = #{code}")
     fun getByCode(@Param("code") code: String): HouseInfo
 
@@ -31,6 +32,6 @@ interface HouseInfoMapper{
 
     @Update("update "+ HouseInfo.TABLE_NAME +" set title=#{houseInfo.title},housing_estate=#{houseInfo.housingEstate},specification=#{houseInfo.specification},size=#{houseInfo.size},orientation=#{houseInfo.orientation},decoration_type=#{houseInfo.decorationType}," +
             "elevator=#{houseInfo.elevator},storey_type=#{houseInfo.storeyType},year=#{houseInfo.year},tower_type=#{houseInfo.towerType},area=#{houseInfo.area},total_price=#{houseInfo.totalPrice},type=#{houseInfo.type},unit_price=#{houseInfo.unitPrice}," +
-            "subway=#{houseInfo.subway},vr=#{houseInfo.vr},taxfree=#{houseInfo.taxfree},any_time=#{houseInfo.anyTime},update_time=#{houseInfo.updateTime}")
+            "subway=#{houseInfo.subway},vr=#{houseInfo.vr},taxfree=#{houseInfo.taxfree},any_time=#{houseInfo.anyTime},update_time=#{houseInfo.updateTime} where code = #{houseInfo.code}")
     fun updateByCode(@Param("houseInfo") houseInfo: HouseInfo): Int
 }

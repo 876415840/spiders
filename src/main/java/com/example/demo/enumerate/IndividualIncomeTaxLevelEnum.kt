@@ -1,4 +1,4 @@
-package com.example.demo.enum
+package com.example.demo.enumerate
 
 import java.math.BigDecimal
 
