@@ -6,6 +6,7 @@ import com.example.demo.entity.PriceChange
 import com.example.demo.enumerate.SingleMapEnum
 import com.example.demo.mapper.HouseInfoMapper
 import com.example.demo.mapper.PriceChangeMapper
+import com.example.demo.vo.PriceChangeVO
 import com.geccocrawler.gecco.pipeline.Pipeline
 import com.geccocrawler.gecco.scheduler.SchedulerContext
 import org.apache.commons.collections.CollectionUtils
@@ -46,7 +47,9 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
     override fun process(secondHandHouse: BjLianJiaSecondHandHouse?) {
         var houseInfoList : List<SecondHandHouseInfo>? = secondHandHouse!!.houseInfoList
         if(CollectionUtils.isNotEmpty(houseInfoList)){
-            var map = SingleMapEnum.SINGLE_DEMO.map
+            var houseInfoByCode = SingleMapEnum.SINGLE_DEMO.houseInfoByCode
+            var exceptions = SingleMapEnum.SINGLE_DEMO.exceptions
+            var priceChanges = SingleMapEnum.SINGLE_DEMO.priceChanges
             try {
                 for (i in houseInfoList!!.indices){
                     var secondHandHouseInfo : SecondHandHouseInfo = houseInfoList[i]
@@ -55,17 +58,20 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
                         logger.warn("=------------------------------houseCode is null--data:{}", JSON.toJSONString(secondHandHouse))
                         continue
                     }
-                    var someHouseInfo : HouseInfo? = map[houseCode!!]
+                    var someHouseInfo : HouseInfo? = houseInfoByCode[houseCode!!]
                     if (someHouseInfo != null) {
                         logger.warn("-----------------重复-------------------houseCode:{}", houseCode)
                         continue
                     }
                     var houseInfo = getHouseInfo(secondHandHouseInfo)
-                    map[houseCode!!] = houseInfo
+                    houseInfoByCode[houseCode!!] = houseInfo
                     var oldHouseInfo = houseInfoMapper.getByCode(houseCode!!)
                     if(oldHouseInfo != null){
                         // 价格变化
                         if (houseInfo.totalPrice != oldHouseInfo.totalPrice){
+                            var priceChangeVO = PriceChangeVO(houseCode!!, houseInfo.totalPrice, houseInfo.unitPrice, oldHouseInfo.totalPrice, oldHouseInfo.unitPrice)
+                            priceChanges.add(priceChangeVO)
+                            logger.info("-----------价格有变化==--  {}", JSON.toJSONString(priceChangeVO))
                             var now = Date()
                             var priceChange = PriceChange()
                             priceChange.houseCode = oldHouseInfo.code
@@ -82,7 +88,8 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
                     }
                 }
             } catch (e: Exception) {
-                e.printStackTrace()
+                exceptions.add(e.message!!)
+                logger.error("处理页面数据异常", e)
             }
             var url : String = secondHandHouse!!.request!!.url
             var pgIndex: Int = StringUtils.indexOf(url,"/pg")

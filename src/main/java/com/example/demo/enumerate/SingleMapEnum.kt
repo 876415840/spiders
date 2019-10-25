@@ -1,6 +1,7 @@
 package com.example.demo.enumerate
 
 import com.example.demo.entity.HouseInfo
+import com.example.demo.vo.PriceChangeVO
 
 /**
  * @Description 单例map容器
@@ -8,9 +9,11 @@ import com.example.demo.entity.HouseInfo
  * @Date 2019/10/24 11:29 AM
  * @Version 1.0
  */
-enum class SingleMapEnum private constructor() {
+enum class SingleMapEnum {
     SINGLE_DEMO;
 
-    val map: MutableMap<String, HouseInfo> = mutableMapOf()
+    val houseInfoByCode: MutableMap<String, HouseInfo> = mutableMapOf()
+    val exceptions: MutableList<String> = ArrayList()
+    val priceChanges: MutableList<PriceChangeVO> = ArrayList()
 
 }
