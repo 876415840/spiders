@@ -37,6 +37,11 @@
 			<scope>test</scope>
 		</dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
         <!-- 自动生成代码 -->
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
@@ -225,7 +230,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <db.url>jdbc:mysql://localhost:3306/spiders</db.url>
+                <db.url>jdbc:mysql://localhost:3306/spiders?useUnicode=true&amp;characterEncoding=utf8</db.url>
                 <db.username>username</db.username>
                 <db.password>password</db.password>
                 <redis.host>localhost</redis.host>
@@ -233,6 +238,9 @@
                 <rabbitmq.addresses>localhost:port</rabbitmq.addresses>
                 <rabbitmq.username>username</rabbitmq.username>
                 <rabbitmq.password>password</rabbitmq.password>
+                <mail.username>mail.username</mail.username>
+                <mail.password>mail.password</mail.password>
+                <mail.to-mail>mail.to-mail</mail.to-mail>
             </properties>
         </profile>
     </profiles>

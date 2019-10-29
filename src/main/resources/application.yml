@@ -59,7 +59,12 @@ spring:
       simple:
         concurrency: 1
         max-concurrency: 10
-
+  mail:
+    host: smtp.qq.com
+    username: @mail.username@
+    password: @mail.password@
+    default-encoding: UTF-8
+    to-mail: @mail.to-mail@
 
 
 ##############################  mybatis  ################################

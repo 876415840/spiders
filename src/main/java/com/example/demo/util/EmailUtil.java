@@ -17,9 +17,9 @@ import java.util.Date;
 @Component
 public class EmailUtil {
     @Autowired
-//    private JavaMailSender sender;
+    private JavaMailSender sender;
 
-//    @Value("${spring.mail.username}")
+    @Value("${spring.mail.username}")
     private String from;
 
     /**
@@ -31,12 +31,11 @@ public class EmailUtil {
     public void sendTextEmail(String to,String subject,String content){
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(from);
-        message.setTo(to);
+        message.setTo(to.split(","));
         message.setSubject(subject);
         message.setText(content);
         message.setSentDate(new Date());
-        //todo
-//        sender.send(message);
+        sender.send(message);
     }
 
 }

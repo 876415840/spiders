@@ -1,5 +1,6 @@
 package com.example.demo.crawler
 
+import com.geccocrawler.gecco.annotation.Attr
 import com.geccocrawler.gecco.annotation.Gecco
 import com.geccocrawler.gecco.annotation.HtmlField
 import com.geccocrawler.gecco.annotation.Request
@@ -21,4 +22,8 @@ class BjLianJiaSecondHandHouse : HtmlBean {
 
     @HtmlField(cssPath = "ul.sellListContent > li")
     var houseInfoList : List<SecondHandHouseInfo>? = null
+
+    @Attr("page-data")
+    @HtmlField(cssPath = "div.contentBottom > div.page-box > div.page-box")
+    var pageData : String? = null
 }

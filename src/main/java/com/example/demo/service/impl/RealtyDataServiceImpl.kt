@@ -9,6 +9,7 @@ import org.apache.commons.collections.CollectionUtils
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 
 
@@ -28,6 +29,9 @@ class RealtyDataServiceImpl : RealtyDataService {
     @Autowired
     private
     lateinit var emailUtil: EmailUtil
+
+    @Value("\${spring.mail.to-mail}")
+    private val toMail: String? = null
 
     /**
      * @Description: 爬取数据
@@ -58,7 +62,7 @@ class RealtyDataServiceImpl : RealtyDataService {
             for (i in SingleMapEnum.SINGLE_DEMO.exceptions!!.indices) {
                 stringBuilder.append(SingleMapEnum.SINGLE_DEMO.exceptions[i]).append("---\n")
             }
-            emailUtil.sendTextEmail("mqhbeijing@163.com", "主题：爬虫异常", stringBuilder.toString())
+            emailUtil.sendTextEmail(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString())
         }
 
         if (CollectionUtils.isNotEmpty(SingleMapEnum.SINGLE_DEMO.priceChanges)) {
@@ -67,7 +71,7 @@ class RealtyDataServiceImpl : RealtyDataService {
                 stringBuilder.append(SingleMapEnum.SINGLE_DEMO.priceChanges[i]).append("---\n")
             }
             //todo  计算变化
-            emailUtil.sendTextEmail("mqhbeijing@163.com", "主题：二手房价格变化", stringBuilder.toString())
+            emailUtil.sendTextEmail(toMail, "主题：二手房价格变化", stringBuilder.toString())
         }
 
         SingleMapEnum.SINGLE_DEMO.houseInfoByCode.clear()
