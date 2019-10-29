@@ -7,6 +7,7 @@ import com.example.demo.vo.PriceChangeVO
 import com.geccocrawler.gecco.GeccoEngine
 import com.geccocrawler.gecco.pipeline.PipelineFactory
 import org.apache.commons.collections.CollectionUtils
+import org.apache.commons.lang3.StringUtils
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -68,17 +69,28 @@ class RealtyDataServiceImpl : RealtyDataService {
 
         if (CollectionUtils.isNotEmpty(SingleMapEnum.SINGLE_DEMO.priceChanges)) {
             var stringBuilder = StringBuilder()
+            var up = 0
+            var down = 0
             for (i in SingleMapEnum.SINGLE_DEMO.priceChanges!!.indices) {
                 var priceChangeVO = SingleMapEnum.SINGLE_DEMO.priceChanges[i]
-                if (priceChangeVO.oldTotalPrice != priceChangeVO.totalPrice) {
-                    stringBuilder.append("地区：").append(priceChangeVO.area).append(",小区：").append(priceChangeVO.housingEstate).append(",编号：").append(priceChangeVO.houseCode)
-                            .append(",房价变化=》总价：").append(priceChangeVO.oldTotalPrice).append(" -> ").append(priceChangeVO.totalPrice).append(" 单价：")
-                            .append(priceChangeVO.oldUnitPrice).append(" -> ").append(priceChangeVO.unitPrice).append("---\n")
+                if (priceChangeVO.oldTotalPrice!! != priceChangeVO.totalPrice!!) {
+                    var risePrice: Boolean = priceChangeVO.oldTotalPrice!! < priceChangeVO.totalPrice!!
+                    var riseDesc: String?
+                    if (risePrice) {
+                        riseDesc = "----------------------------上涨"
+                        up++
+                    } else {
+                        riseDesc = "----------------------------下降"
+                        down++
+                    }
+                    stringBuilder.append("地区：").append(priceChangeVO.area).append(", 小区：").append(priceChangeVO.housingEstate).append(", 编号：").append(priceChangeVO.houseCode)
+                            .append(", 总价：").append(priceChangeVO.oldTotalPrice!!).append(" -> ").append(priceChangeVO.totalPrice!!).append(" 单价：")
+                            .append(priceChangeVO.oldUnitPrice).append(" -> ").append(priceChangeVO.unitPrice).append(riseDesc).append("---\n")
                 }
             }
-            emailUtil.sendTextEmail(toMail, "二手房价格有变化了", stringBuilder.toString())
+            emailUtil.sendTextEmail(toMail, StringUtils.join("北京二手房价格今天发生变化，上涨", up, "户，下降", down, "户"), stringBuilder.toString())
         }
-
+        // 清除全局容器
         SingleMapEnum.SINGLE_DEMO.houseInfoByCode.clear()
         SingleMapEnum.SINGLE_DEMO.exceptions.clear()
         SingleMapEnum.SINGLE_DEMO.priceChanges.clear()
