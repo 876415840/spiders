@@ -69,7 +69,7 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
                     if(oldHouseInfo != null){
                         // 价格变化
                         if (houseInfo.totalPrice != oldHouseInfo.totalPrice){
-                            var priceChangeVO = PriceChangeVO(houseCode!!, houseInfo.totalPrice, houseInfo.unitPrice, oldHouseInfo.totalPrice, oldHouseInfo.unitPrice)
+                            var priceChangeVO = PriceChangeVO(houseInfo.area, houseInfo.housingEstate, houseCode!!, houseInfo.totalPrice, houseInfo.unitPrice, oldHouseInfo.totalPrice, oldHouseInfo.unitPrice)
                             priceChanges.add(priceChangeVO)
                             logger.info("-----------价格有变化==--  {}", JSON.toJSONString(priceChangeVO))
                             var now = Date()

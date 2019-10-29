@@ -3,6 +3,7 @@ package com.example.demo.service.impl
 import com.example.demo.enumerate.SingleMapEnum
 import com.example.demo.service.RealtyDataService
 import com.example.demo.util.EmailUtil
+import com.example.demo.vo.PriceChangeVO
 import com.geccocrawler.gecco.GeccoEngine
 import com.geccocrawler.gecco.pipeline.PipelineFactory
 import org.apache.commons.collections.CollectionUtils
@@ -68,10 +69,14 @@ class RealtyDataServiceImpl : RealtyDataService {
         if (CollectionUtils.isNotEmpty(SingleMapEnum.SINGLE_DEMO.priceChanges)) {
             var stringBuilder = StringBuilder()
             for (i in SingleMapEnum.SINGLE_DEMO.priceChanges!!.indices) {
-                stringBuilder.append(SingleMapEnum.SINGLE_DEMO.priceChanges[i]).append("---\n")
+                var priceChangeVO = SingleMapEnum.SINGLE_DEMO.priceChanges[i]
+                if (priceChangeVO.oldTotalPrice != priceChangeVO.totalPrice) {
+                    stringBuilder.append("地区：").append(priceChangeVO.area).append(",小区：").append(priceChangeVO.housingEstate).append(",编号：").append(priceChangeVO.houseCode)
+                            .append(",房价变化=》总价：").append(priceChangeVO.oldTotalPrice).append(" -> ").append(priceChangeVO.totalPrice).append(" 单价：")
+                            .append(priceChangeVO.oldUnitPrice).append(" -> ").append(priceChangeVO.unitPrice).append("---\n")
+                }
             }
-            //todo  计算变化
-            emailUtil.sendTextEmail(toMail, "主题：二手房价格变化", stringBuilder.toString())
+            emailUtil.sendTextEmail(toMail, "二手房价格有变化了", stringBuilder.toString())
         }
 
         SingleMapEnum.SINGLE_DEMO.houseInfoByCode.clear()

@@ -10,6 +10,16 @@ package com.example.demo.vo
 class PriceChangeVO {
 
     /**
+     * 地区
+     */
+    var area: String? = null
+
+    /**
+     * 小区
+     */
+    var housingEstate: String? = null
+
+    /**
      * 房屋编码
      */
     var houseCode: String? = null
@@ -34,7 +44,9 @@ class PriceChangeVO {
      */
     var oldUnitPrice: Int? = null
 
-    constructor(houseCode: String?, totalPrice: Int?, unitPrice: Int?, oldTotalPrice: Int?, oldUnitPrice: Int?) {
+    constructor(area: String?, housingEstate: String?, houseCode: String?, totalPrice: Int?, unitPrice: Int?, oldTotalPrice: Int?, oldUnitPrice: Int?) {
+        this.area = area
+        this.housingEstate = housingEstate
         this.houseCode = houseCode
         this.totalPrice = totalPrice
         this.unitPrice = unitPrice
