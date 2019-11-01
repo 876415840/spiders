@@ -1,6 +1,6 @@
 CREATE TABLE `house_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `title` varchar(32) NOT NULL COMMENT '标题',
+  `title` varchar(256) NOT NULL COMMENT '标题',
   `code` varchar(16) NOT NULL COMMENT '房屋编码',
   `housing_estate` varchar(16) DEFAULT NULL COMMENT '小区',
   `specification` varchar(16) DEFAULT NULL COMMENT '规格',

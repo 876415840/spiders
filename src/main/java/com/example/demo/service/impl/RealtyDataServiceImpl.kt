@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
+import java.math.BigDecimal
 
 
 /**
@@ -100,19 +101,22 @@ class RealtyDataServiceImpl : RealtyDataService {
                 }
             }
             var upDesc = getUpDesc(up, upPrices, upScale)
-            var downDesc = getDownDesc(down, downPrices, downScale, up)
+            var downDesc = getDownDesc(down, downPrices, downScale)
             emailUtil.sendTextEmail(toMail, StringUtils.join("北京二手房价格今天发生变化"), StringBuilder(upDesc).append(downDesc).append("\n\n\n").append(stringBuilder).toString())
         }
     }
 
-    private fun getDownDesc(down: Int, downPrices: ArrayList<Int>, downScale: ArrayList<Int>, up: Int): String {
+    private fun getDownDesc(down: Int, downPrices: ArrayList<Int>, downScale: ArrayList<Int>): String {
         var downDesc = "下降0户\n"
         if (down > 0) {
             var maxPrice = downPrices.max()
             var maxScale = downScale.max()
             var averPrice = downPrices.average()
             var averScale = downScale.average()
-            downDesc = StringBuilder("下降").append(up).append("套，").append("最大降幅：").append(maxScale).append("%，最大下降金额").append(maxPrice).append("，平均降幅：").append(averScale).append("%，平均下降金额：").append(averPrice).append(" --ps金额并不一定和幅度对应\n").toString()
+            downDesc = StringBuilder("下降").append(down).append("套，")
+                    .append("最大降幅：").append(BigDecimal.valueOf(maxScale!!.toLong()).divide(BigDecimal.TEN)).append("%，最大下降金额").append(maxPrice)
+                    .append("，平均降幅：").append(BigDecimal.valueOf(averScale!!.toLong()).divide(BigDecimal.TEN)).append("%，平均下降金额：").append(averPrice)
+                    .append(" --ps金额并不一定和幅度对应\n").toString()
         }
         return downDesc
     }
@@ -124,7 +128,10 @@ class RealtyDataServiceImpl : RealtyDataService {
             var maxScale = upScale.max()
             var averPrice = upPrices.average()
             var averScale = upScale.average()
-            upDesc = StringBuilder("上涨").append(up).append("套，").append("最大涨幅：").append(maxScale).append("%，最大上涨金额").append(maxPrice).append("，平均涨幅：").append(averScale).append("%，平均上涨金额：").append(averPrice).append(" --ps金额并不一定和幅度对应\n").toString()
+            upDesc = StringBuilder("上涨").append(up).append("套，")
+                    .append("最大涨幅：").append(BigDecimal.valueOf(maxScale!!.toLong()).divide(BigDecimal.TEN)).append("%，最大上涨金额").append(maxPrice)
+                    .append("，平均涨幅：").append(BigDecimal.valueOf(averScale!!.toLong()).divide(BigDecimal.TEN)).append("%，平均上涨金额：").append(averPrice)
+                    .append(" --ps金额并不一定和幅度对应\n").toString()
         }
         return upDesc
     }
