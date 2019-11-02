@@ -3,6 +3,7 @@ package com.example.demo.service.impl
 import com.example.demo.enumerate.SingleMapEnum
 import com.example.demo.service.RealtyDataService
 import com.example.demo.util.EmailUtil
+import com.example.demo.vo.PriceChangeVO
 import com.geccocrawler.gecco.GeccoEngine
 import com.geccocrawler.gecco.pipeline.PipelineFactory
 import org.apache.commons.collections.CollectionUtils
@@ -70,7 +71,8 @@ class RealtyDataServiceImpl : RealtyDataService {
      */
     private fun sendPriceChangeMessage() {
         if (CollectionUtils.isNotEmpty(SingleMapEnum.SINGLE_DEMO.priceChanges)) {
-            var stringBuilder = StringBuilder()
+            var upMesage = StringBuilder()
+            var downMessage = StringBuilder()
             var up = 0
             var down = 0
             var upPrices = ArrayList<Int>()
@@ -81,29 +83,35 @@ class RealtyDataServiceImpl : RealtyDataService {
                 var priceChangeVO = SingleMapEnum.SINGLE_DEMO.priceChanges[i]
                 if (priceChangeVO.oldTotalPrice!! != priceChangeVO.totalPrice!!) {
                     var risePrice: Boolean = priceChangeVO.oldTotalPrice!! < priceChangeVO.totalPrice!!
-                    var riseDesc: String?
                     if (risePrice) {
                         var changePrice = priceChangeVO.totalPrice!! - priceChangeVO.oldTotalPrice!!
-                        riseDesc = "-----------上涨" + changePrice + "元"
+                        putMessage(upMesage, priceChangeVO, changePrice, risePrice)
                         upPrices.add(changePrice)
                         upScale.add(changePrice * 1000 / priceChangeVO.totalPrice!!)
                         up++
                     } else {
                         var changePrice = priceChangeVO.oldTotalPrice!! - priceChangeVO.totalPrice!!
-                        riseDesc = "-----------下降" + changePrice + "元"
+                        putMessage(downMessage, priceChangeVO, changePrice, risePrice)
                         downPrices.add(changePrice)
-                        downScale.add(changePrice * 10000 / priceChangeVO.oldTotalPrice!!)
+                        downScale.add(changePrice * 1000 / priceChangeVO.oldTotalPrice!!)
                         down++
                     }
-                    stringBuilder.append("地区：").append(priceChangeVO.area).append(", 小区：").append(priceChangeVO.housingEstate).append(", 编号：").append(priceChangeVO.houseCode)
-                            .append(", 总价：").append(priceChangeVO.oldTotalPrice!!).append(" -> ").append(priceChangeVO.totalPrice!!).append(" 单价：")
-                            .append(priceChangeVO.oldUnitPrice).append(" -> ").append(priceChangeVO.unitPrice).append(riseDesc).append("---\n")
                 }
             }
             var upDesc = getUpDesc(up, upPrices, upScale)
             var downDesc = getDownDesc(down, downPrices, downScale)
-            emailUtil.sendTextEmail(toMail, StringUtils.join("北京二手房价格今天发生变化"), StringBuilder(upDesc).append(downDesc).append("\n\n\n").append(stringBuilder).toString())
+            emailUtil.sendTextEmail(toMail, StringUtils.join("北京二手房价格今天发生变化"), StringBuilder(upDesc).append(downDesc).append("\n\n\n").append(upMesage).append(downMessage).toString())
         }
+    }
+
+    private fun putMessage(upMesage: StringBuilder, priceChangeVO: PriceChangeVO, changePrice: Int, risePrice: Boolean) {
+        var riseDesc = "下降"
+        if (risePrice) {
+            riseDesc = "上涨"
+        }
+        upMesage.append("地区：").append(priceChangeVO.area).append(", 小区：").append(priceChangeVO.housingEstate).append(", 编号：").append(priceChangeVO.houseCode)
+                .append(", 总价：").append(priceChangeVO.oldTotalPrice!!).append(" -> ").append(priceChangeVO.totalPrice!!).append(" 单价：")
+                .append(priceChangeVO.oldUnitPrice).append(" -> ").append(priceChangeVO.unitPrice).append("-------").append(riseDesc).append(changePrice).append("元---\n")
     }
 
     private fun getDownDesc(down: Int, downPrices: ArrayList<Int>, downScale: ArrayList<Int>): String {
