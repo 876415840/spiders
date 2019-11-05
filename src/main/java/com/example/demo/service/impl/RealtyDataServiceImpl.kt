@@ -100,7 +100,7 @@ class RealtyDataServiceImpl : RealtyDataService {
             }
             var upDesc = getUpDesc(up, upPrices, upScale)
             var downDesc = getDownDesc(down, downPrices, downScale)
-            emailUtil.sendTextEmail(toMail, StringUtils.join("北京二手房价格今天发生变化"), StringBuilder(upDesc).append(downDesc).append("\n\n\n").append(upMesage).append(downMessage).toString())
+            emailUtil.sendTextEmail(toMail, StringUtils.join("北京二手房价格今天发生变化"), StringBuilder(upDesc).append("\n\n").append(downDesc).append("\n\n\n").append(upMesage).append("\n\n\n").append(downMessage).toString())
         }
     }
 
