@@ -23,14 +23,16 @@ import org.springframework.beans.factory.annotation.Autowired
 class RealtyDataServiceImplTest {
 
     @Autowired
-    lateinit var realtyDataService: RealtyDataService
+    lateinit var realtyDataServices: Map<String, RealtyDataService>
 
     @Autowired
     lateinit var rabbitmqService: RabbitmqService
 
     @org.junit.Test
     fun spiderData() {
-        realtyDataService.spiderData()
+        for (service in realtyDataServices.values) {
+            service.spiderData()
+        }
         LOGGER.info("================================>{}", "test")
     }
 

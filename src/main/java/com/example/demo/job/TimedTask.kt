@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component
 @Component
 class TimedTask {
 
-    @Autowired lateinit var realtyDataService: RealtyDataService
+    @Autowired lateinit var realtyDataServices: Map<String, RealtyDataService>
 
     /**
      * @Description: 凌晨定时任务
@@ -25,6 +25,8 @@ class TimedTask {
      */
     @Scheduled(cron = "31 37 09 * * ?")
     fun WeeHours() {
-        realtyDataService.spiderData()
+        for (service in realtyDataServices.values) {
+            service.spiderData()
+        }
     }
 }

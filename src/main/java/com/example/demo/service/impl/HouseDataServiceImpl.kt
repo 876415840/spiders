@@ -23,9 +23,9 @@ import java.math.BigDecimal
  * @Version 1.0
  */
 @Service
-class RealtyDataServiceImpl : RealtyDataService {
+class HouseDataServiceImpl : RealtyDataService {
 
-    private val logger: Logger = LoggerFactory.getLogger(RealtyDataServiceImpl::class.java)
+    private val logger: Logger = LoggerFactory.getLogger(HouseDataServiceImpl::class.java)
 
     @Autowired lateinit var springPipelineFactory: PipelineFactory
 
@@ -44,7 +44,7 @@ class RealtyDataServiceImpl : RealtyDataService {
      * @return:
      */
     override fun spiderData() {
-        logger.info("爬取数据-------------start")
+        logger.info("爬取二手房数据-------------start")
 
         // 爬取数据
         runSpider()
@@ -58,7 +58,7 @@ class RealtyDataServiceImpl : RealtyDataService {
         // 清除全局容器
         clearContainer()
 
-        logger.info("爬取数据-------------end")
+        logger.info("爬取二手房数据-------------end")
     }
 
     /**
