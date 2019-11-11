@@ -124,7 +124,7 @@ class RealtyDataServiceImpl : RealtyDataService {
             downDesc = StringBuilder("下降").append(down).append("套，")
                     .append("最大降幅：").append(BigDecimal.valueOf(maxScale!!.toLong()).divide(BigDecimal.TEN)).append("%，最大下降金额").append(maxPrice)
                     .append("，平均降幅：").append(BigDecimal.valueOf(averScale!!.toLong()).divide(BigDecimal.TEN)).append("%，平均下降金额：").append(averPrice)
-                    .append(" --ps金额并不一定和幅度对应\n").toString()
+                    .append(" \n\n").toString()
         }
         return downDesc
     }
@@ -139,7 +139,7 @@ class RealtyDataServiceImpl : RealtyDataService {
             upDesc = StringBuilder("上涨").append(up).append("套，")
                     .append("最大涨幅：").append(BigDecimal.valueOf(maxScale!!.toLong()).divide(BigDecimal.TEN)).append("%，最大上涨金额").append(maxPrice)
                     .append("，平均涨幅：").append(BigDecimal.valueOf(averScale!!.toLong()).divide(BigDecimal.TEN)).append("%，平均上涨金额：").append(averPrice)
-                    .append(" --ps金额并不一定和幅度对应\n").toString()
+                    .append(" \n\n").toString()
         }
         return upDesc
     }
