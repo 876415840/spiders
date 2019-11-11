@@ -1,9 +1,14 @@
 package com.example.demo.generate.db;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Objects;
+import java.util.Properties;
 
 
 public class MysqlConnection {
@@ -19,7 +24,28 @@ public class MysqlConnection {
 
 		try {
 			if(conn == null){
-				conn = DriverManager.getConnection(Config.URL_VALUE, Config.USERNAME_VALUE,Config.PASSWORD_VALUE);
+				String url = null;
+				String username = null;
+				String password = null;
+				InputStream stream = MysqlConnection.class.getClassLoader().getResourceAsStream("application.yml");
+				InputStreamReader in = new InputStreamReader(stream);
+				BufferedReader reader = new BufferedReader(in);
+				String line;
+				int index = 0;
+				while ((line = reader.readLine()) != null) {
+					if (Objects.equals(line.trim(), "spring:")) {
+						index++;
+					} else if (Objects.equals(line.trim(), "datasource:")) {
+						index++;
+					} else if (url == null && index == 2 && line.trim().startsWith("url:")) {
+						url = line.trim().replace("url:", "").trim();
+					} else if (username == null && index == 2 && line.trim().startsWith("username:")) {
+						username = line.trim().replace("username:", "").trim();
+					} else if (password == null && index == 2 && line.trim().startsWith("password:")) {
+						password = line.trim().replace("password:", "").trim();
+					}
+				}
+				conn = DriverManager.getConnection(url, username, password);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

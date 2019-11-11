@@ -1,4 +1,4 @@
-package com.example.demo.crawler
+package com.example.demo.crawler.house
 
 import com.geccocrawler.gecco.annotation.Attr
 import com.geccocrawler.gecco.annotation.HtmlField

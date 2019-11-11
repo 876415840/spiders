@@ -168,6 +168,7 @@
                 <filtering>true</filtering>
                 <includes>
                     <include>**/*.yml</include>
+                    <include>**/*.ftl</include>
                 </includes>
             </resource>
         </resources>

@@ -1,4 +1,4 @@
-package com.example.demo.crawler
+package com.example.demo.crawler.house
 
 import com.alibaba.fastjson.JSON
 import com.example.demo.entity.HouseInfo
