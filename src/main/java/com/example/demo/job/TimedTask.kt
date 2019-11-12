@@ -23,7 +23,7 @@ class TimedTask {
      * @date 2018/12/24 7:26 PM
      * @return: 
      */
-    @Scheduled(cron = "31 37 09 * * ?")
+    @Scheduled(cron = "31 11 09 * * ?")
     fun WeeHours() {
         for (service in realtyDataServices.values) {
             service.spiderData()
