@@ -50,7 +50,7 @@ class LotteryDataServiceImpl : RealtyDataService {
         GeccoEngine.create()
                 .pipelineFactory(springPipelineFactory)
                 // 工程的包路径
-                .classpath("com.example.demo.crawler")
+                .classpath("com.example.demo.crawler.lottery")
                 // 开始抓取的页面地址
                 .start(StringUtils.join("http://kaijiang.500.com/shtml/ssq/", start, ".shtml"))
                 // 开启几个爬虫线程

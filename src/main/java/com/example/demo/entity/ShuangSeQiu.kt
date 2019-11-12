@@ -1,6 +1,5 @@
 package com.example.demo.entity
 
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder
 import java.io.Serializable
 import java.util.*
 import javax.persistence.GeneratedValue
@@ -59,6 +58,28 @@ class ShuangSeQiu : Serializable {
      * 蓝球
      */
     var blue: String? = null
+
+    /**
+     * 创建时间
+     */
+    var createTime: Date? = null
+
+    /**
+     * 更新时间
+     */
+    var updateTime: Date? = null
+
+    constructor(period: Int?, red1: String?, red2: String?, red3: String?, red4: String?, red5: String?, red6: String?, blue: String?) {
+        this.period = period
+        this.red1 = red1
+        this.red2 = red2
+        this.red3 = red3
+        this.red4 = red4
+        this.red5 = red5
+        this.red6 = red6
+        this.blue = blue
+    }
+
 
     companion object {
         /**

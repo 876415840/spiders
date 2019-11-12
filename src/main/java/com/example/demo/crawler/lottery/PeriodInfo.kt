@@ -12,10 +12,10 @@ import com.geccocrawler.gecco.spider.HtmlBean
  */
 class PeriodInfo : HtmlBean {
 
-    @HtmlField(cssPath = "")
+    @HtmlField(cssPath = "a")
     var period : String? = null
 
     @Attr("href")
-    @HtmlField(cssPath = "")
+    @HtmlField(cssPath = "a")
     var href : String? = null
 }

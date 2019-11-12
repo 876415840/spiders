@@ -174,7 +174,7 @@ class HouseDataServiceImpl : RealtyDataService {
         GeccoEngine.create()
                 .pipelineFactory(springPipelineFactory)
                 // 工程的包路径
-                .classpath("com.example.demo.crawler")
+                .classpath("com.example.demo.crawler.house")
                 // 开始抓取的页面地址
                 .start("https://bj.lianjia.com/ershoufang/pg1/")
                 // 开启几个爬虫线程

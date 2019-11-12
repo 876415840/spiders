@@ -1,5 +1,6 @@
 package com.example.demo.crawler.lottery
 
+import com.geccocrawler.gecco.annotation.Attr
 import com.geccocrawler.gecco.annotation.Gecco
 import com.geccocrawler.gecco.annotation.HtmlField
 import com.geccocrawler.gecco.annotation.Request
@@ -19,6 +20,16 @@ class LotteryInfo : HtmlBean {
     @Request
     var request : HttpRequest? = null
 
-    @HtmlField(cssPath = "span.iSelectBox > div.listOverFlow > a")
+    @HtmlField(cssPath = "span.iSelectBox > div.iSelectList > a")
     var periodList : List<PeriodInfo>? = null
+
+    @HtmlField(cssPath = "span.iSelectBox > a#change_date")
+    var currentPeriod : String? = null
+
+    @HtmlField(cssPath = "div.ball_box01 > ul > li.ball_blue")
+    var blueBall : String? = null
+
+    @HtmlField(cssPath = "table.kj_tablelist02 table tr")
+    var trList : List<String>? = null
+
 }
