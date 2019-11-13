@@ -79,7 +79,7 @@ class HouseDataServiceImpl : RealtyDataService {
             var downPrices = ArrayList<Int>()
             var upScale = ArrayList<Int>()
             var downScale = ArrayList<Int>()
-            for (i in SingleMapEnum.SINGLE_DEMO.priceChanges!!.indices) {
+            for (i in SingleMapEnum.SINGLE_DEMO.priceChanges.indices) {
                 var priceChangeVO = SingleMapEnum.SINGLE_DEMO.priceChanges[i]
                 if (priceChangeVO.oldTotalPrice!! != priceChangeVO.totalPrice!!) {
                     var risePrice: Boolean = priceChangeVO.oldTotalPrice!! < priceChangeVO.totalPrice!!
@@ -123,7 +123,7 @@ class HouseDataServiceImpl : RealtyDataService {
             var averScale = downScale.average()
             downDesc = StringBuilder("下降").append(down).append("套，")
                     .append("最大降幅：").append(BigDecimal.valueOf(maxScale!!.toLong()).divide(BigDecimal.TEN)).append("%，最大下降金额").append(maxPrice)
-                    .append("，平均降幅：").append(BigDecimal.valueOf(averScale!!.toLong()).divide(BigDecimal.TEN)).append("%，平均下降金额：").append(averPrice)
+                    .append("，平均降幅：").append(BigDecimal.valueOf(averScale.toLong()).divide(BigDecimal.TEN)).append("%，平均下降金额：").append(averPrice)
                     .append(" \n\n").toString()
         }
         return downDesc
@@ -138,7 +138,7 @@ class HouseDataServiceImpl : RealtyDataService {
             var averScale = upScale.average()
             upDesc = StringBuilder("上涨").append(up).append("套，")
                     .append("最大涨幅：").append(BigDecimal.valueOf(maxScale!!.toLong()).divide(BigDecimal.TEN)).append("%，最大上涨金额").append(maxPrice)
-                    .append("，平均涨幅：").append(BigDecimal.valueOf(averScale!!.toLong()).divide(BigDecimal.TEN)).append("%，平均上涨金额：").append(averPrice)
+                    .append("，平均涨幅：").append(BigDecimal.valueOf(averScale.toLong()).divide(BigDecimal.TEN)).append("%，平均上涨金额：").append(averPrice)
                     .append(" \n\n").toString()
         }
         return upDesc
@@ -155,7 +155,7 @@ class HouseDataServiceImpl : RealtyDataService {
     private fun sendErrorMessage() {
         if (CollectionUtils.isNotEmpty(SingleMapEnum.SINGLE_DEMO.exceptions)) {
             var stringBuilder = StringBuilder()
-            for (i in SingleMapEnum.SINGLE_DEMO.exceptions!!.indices) {
+            for (i in SingleMapEnum.SINGLE_DEMO.exceptions.indices) {
                 stringBuilder.append(SingleMapEnum.SINGLE_DEMO.exceptions[i]).append("---\n")
             }
             emailUtil.sendTextEmail(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString())

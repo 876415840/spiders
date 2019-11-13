@@ -8,7 +8,7 @@ import com.example.demo.mapper.HouseInfoMapper
 import com.example.demo.mapper.PriceChangeMapper
 import com.example.demo.vo.PriceChangeVO
 import com.geccocrawler.gecco.pipeline.Pipeline
-import com.geccocrawler.gecco.scheduler.SchedulerContext
+import com.geccocrawler.gecco.scheduler.DeriveSchedulerContext
 import org.apache.commons.collections.CollectionUtils
 import org.apache.commons.lang3.StringUtils
 import org.slf4j.Logger
@@ -64,51 +64,46 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
                         continue
                     }
                     var houseInfo = getHouseInfo(secondHandHouseInfo)
-                    houseInfoByCode[houseCode!!] = houseInfo
-                    var oldHouseInfo = houseInfoMapper.getByCode(houseCode!!)
-                    if(oldHouseInfo != null){
-                        // 价格变化
-                        if (houseInfo.totalPrice != oldHouseInfo.totalPrice){
-                            var priceChangeVO = PriceChangeVO(houseInfo.area, houseInfo.housingEstate, houseCode!!, houseInfo.totalPrice, houseInfo.unitPrice, oldHouseInfo.totalPrice, oldHouseInfo.unitPrice)
-                            priceChanges.add(priceChangeVO)
-                            logger.info("-----------价格有变化==--  {}", JSON.toJSONString(priceChangeVO))
-                            var now = Date()
-                            var priceChange = PriceChange()
-                            priceChange.houseCode = oldHouseInfo.code
-                            priceChange.totalPrice = oldHouseInfo.totalPrice
-                            priceChange.unitPrice = oldHouseInfo.unitPrice
-                            priceChange.createTime = now
-                            priceChange.updateTime = now
-                            priceChangeMapper.save(priceChange)
-                        }
-                        houseInfoMapper.updateByCode(houseInfo)
-                    }else{
-                        houseInfo.createTime = houseInfo.updateTime
-                        houseInfoMapper.save(houseInfo)
+                    houseInfoByCode[houseCode] = houseInfo
+                    var oldHouseInfo = houseInfoMapper.getByCode(houseCode)
+                    // 价格变化
+                    if (houseInfo.totalPrice != oldHouseInfo.totalPrice){
+                        var priceChangeVO = PriceChangeVO(houseInfo.area, houseInfo.housingEstate, houseCode, houseInfo.totalPrice, houseInfo.unitPrice, oldHouseInfo.totalPrice, oldHouseInfo.unitPrice)
+                        priceChanges.add(priceChangeVO)
+                        logger.info("-----------价格有变化==--  {}", JSON.toJSONString(priceChangeVO))
+                        var now = Date()
+                        var priceChange = PriceChange()
+                        priceChange.houseCode = oldHouseInfo.code
+                        priceChange.totalPrice = oldHouseInfo.totalPrice
+                        priceChange.unitPrice = oldHouseInfo.unitPrice
+                        priceChange.createTime = now
+                        priceChange.updateTime = now
+                        priceChangeMapper.save(priceChange)
                     }
+                    houseInfoMapper.updateByCode(houseInfo)
                 }
             } catch (e: Exception) {
                 exceptions.add(e.message!!)
                 logger.error("处理页面数据异常", e)
             }
             try {
-                var pageData: String? = secondHandHouse!!.pageData
+                var pageData: String? = secondHandHouse.pageData
                 // {"totalPage":100,"curPage":99}
                 if (pageData != null) {
                     var obj = JSON.parseObject(pageData)
                     var curPage = obj.getIntValue("curPage")
                     logger.info("爬取数据--------curPage-----{}页", curPage)
                     if (curPage < obj.getIntValue("totalPage")) {
-                        SchedulerContext.into(secondHandHouse!!.request!!.subRequest("https://bj.lianjia.com/ershoufang/pg" + (curPage + 1) + "/"))
+                        DeriveSchedulerContext.into(secondHandHouse.request!!.subRequest("https://bj.lianjia.com/ershoufang/pg" + (curPage + 1) + "/"))
                     }
                 } else {
-                    var url : String = secondHandHouse!!.request!!.url
+                    var url : String = secondHandHouse.request!!.url
                     var pgIndex: Int = StringUtils.indexOf(url,"/pg")
                     var indexSuffix: String = StringUtils.substring(url,pgIndex+3)
                     var index: String = StringUtils.substring(indexSuffix,0,StringUtils.indexOf(indexSuffix,"/"))
                     var page: Int = Integer.valueOf(index)+1
                     url = StringUtils.replace(url,"/pg${index}/","/pg${page}/")
-                    SchedulerContext.into(secondHandHouse!!.request!!.subRequest(url))
+                    DeriveSchedulerContext.into(secondHandHouse.request!!.subRequest(url))
                     logger.info("爬取数据--------index-----{}页", index)
                 }
             } catch (e: Exception) {
