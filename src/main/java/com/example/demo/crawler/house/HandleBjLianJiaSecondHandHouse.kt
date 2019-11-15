@@ -24,7 +24,7 @@ import java.util.*
  * @Date 2018/12/19 6:08 PM
  * @Version 1.0
  */
-@Service("bjLianJiaSecondHandHouse")
+@Service("handleBjLianJiaSecondHandHouse")
 class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
 
     private val logger: Logger = LoggerFactory.getLogger(HandleBjLianJiaSecondHandHouse::class.java)

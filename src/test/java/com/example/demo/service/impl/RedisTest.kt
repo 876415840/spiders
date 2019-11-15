@@ -22,8 +22,7 @@ class RedisTest {
         private val LOGGER = LoggerFactory.getLogger(RealtyDataServiceImplTest::class.java)
     }
 
-    @Autowired
-    open lateinit var redisTemplate: RedisTemplate<String, String>
+    @Autowired lateinit var redisTemplate: RedisTemplate<String, String>
 
     @org.junit.Test
     fun test() {

@@ -13,7 +13,7 @@ import com.geccocrawler.gecco.spider.HtmlBean
  * @Date 2018/12/19 5:11 PM
  * @Version 1.0
  */
-@Gecco(pipelines = ["bjLianJiaSecondHandHouse"])
+@Gecco(pipelines = ["handleBjLianJiaSecondHandHouse"])
 class BjLianJiaSecondHandHouse : HtmlBean {
 
     // 向指定URL发送GET请求
