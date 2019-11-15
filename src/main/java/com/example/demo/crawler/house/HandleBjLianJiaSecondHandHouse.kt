@@ -64,52 +64,77 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
                         continue
                     }
                     var houseInfo = getHouseInfo(secondHandHouseInfo)
-                    houseInfoByCode[houseCode] = houseInfo
-                    var oldHouseInfo = houseInfoMapper.getByCode(houseCode)
-                    // 价格变化
-                    if (houseInfo.totalPrice != oldHouseInfo.totalPrice){
-                        var priceChangeVO = PriceChangeVO(houseInfo.area, houseInfo.housingEstate, houseCode, houseInfo.totalPrice, houseInfo.unitPrice, oldHouseInfo.totalPrice, oldHouseInfo.unitPrice)
-                        priceChanges.add(priceChangeVO)
-                        logger.info("-----------价格有变化==--  {}", JSON.toJSONString(priceChangeVO))
-                        var now = Date()
-                        var priceChange = PriceChange()
-                        priceChange.houseCode = oldHouseInfo.code
-                        priceChange.totalPrice = oldHouseInfo.totalPrice
-                        priceChange.unitPrice = oldHouseInfo.unitPrice
-                        priceChange.createTime = now
-                        priceChange.updateTime = now
-                        priceChangeMapper.save(priceChange)
-                    }
-                    houseInfoMapper.updateByCode(houseInfo)
+                    updateOrSave(houseInfo, priceChanges)
                 }
             } catch (e: Exception) {
                 exceptions.add(e.message!!)
                 logger.error("处理页面数据异常", e)
             }
-            try {
-                var pageData: String? = secondHandHouse.pageData
-                // {"totalPage":100,"curPage":99}
-                if (pageData != null) {
-                    var obj = JSON.parseObject(pageData)
-                    var curPage = obj.getIntValue("curPage")
-                    logger.info("爬取数据--------curPage-----{}页", curPage)
-                    if (curPage < obj.getIntValue("totalPage")) {
-                        DeriveSchedulerContext.into(secondHandHouse.request!!.subRequest("https://bj.lianjia.com/ershoufang/pg" + (curPage + 1) + "/"))
-                    }
-                } else {
-                    var url : String = secondHandHouse.request!!.url
-                    var pgIndex: Int = StringUtils.indexOf(url,"/pg")
-                    var indexSuffix: String = StringUtils.substring(url,pgIndex+3)
-                    var index: String = StringUtils.substring(indexSuffix,0,StringUtils.indexOf(indexSuffix,"/"))
-                    var page: Int = Integer.valueOf(index)+1
-                    url = StringUtils.replace(url,"/pg${index}/","/pg${page}/")
-                    DeriveSchedulerContext.into(secondHandHouse.request!!.subRequest(url))
-                    logger.info("爬取数据--------index-----{}页", index)
+            skipPage(secondHandHouse, exceptions)
+        }
+    }
+
+    /**
+     * @Description: 跳转页面
+     * @author MengQingHao
+     * @date 2019/11/15 11:00 上午
+     * @version 1.0
+     */
+    private fun skipPage(secondHandHouse: BjLianJiaSecondHandHouse, exceptions: MutableList<String>) {
+        try {
+            var pageData: String? = secondHandHouse.pageData
+            // {"totalPage":100,"curPage":99}
+            if (pageData != null) {
+                var obj = JSON.parseObject(pageData)
+                var curPage = obj.getIntValue("curPage")
+                logger.info("爬取数据--------curPage-----{}页", curPage)
+                if (curPage < obj.getIntValue("totalPage")) {
+                    DeriveSchedulerContext.into(secondHandHouse.request!!.subRequest("https://bj.lianjia.com/ershoufang/pg" + (curPage + 1) + "/"))
                 }
-            } catch (e: Exception) {
-                exceptions.add(e.message!!)
-                logger.error("跳转页面异常", e)
+            } else {
+                var url: String = secondHandHouse.request!!.url
+                var pgIndex: Int = StringUtils.indexOf(url, "/pg")
+                var indexSuffix: String = StringUtils.substring(url, pgIndex + 3)
+                var index: String = StringUtils.substring(indexSuffix, 0, StringUtils.indexOf(indexSuffix, "/"))
+                var page: Int = Integer.valueOf(index) + 1
+                url = StringUtils.replace(url, "/pg${index}/", "/pg${page}/")
+                DeriveSchedulerContext.into(secondHandHouse.request!!.subRequest(url))
+                logger.info("爬取数据--------index-----{}页", index)
             }
+        } catch (e: Exception) {
+            exceptions.add(e.message!!)
+            logger.error("跳转页面异常", e)
+        }
+    }
+
+    /**
+     * @Description: 更新价格
+     * @author MengQingHao
+     * @date 2019/11/15 10:59 上午
+     * @version 1.0
+     */
+    private fun updateOrSave(houseInfo: HouseInfo, priceChanges: MutableList<PriceChangeVO>) {
+        var houseCode = houseInfo.code
+        var oldHouseInfo = houseInfoMapper.getByCode(houseCode!!)
+        if (oldHouseInfo == null) {
+            houseInfo.createTime = Date()
+            houseInfoMapper.save(houseInfo)
+            return
+        }
+        // 价格变化
+        if (houseInfo.totalPrice != oldHouseInfo.totalPrice) {
+            var priceChangeVO = PriceChangeVO(houseInfo.area, houseInfo.housingEstate, houseCode, houseInfo.totalPrice, houseInfo.unitPrice, oldHouseInfo.totalPrice, oldHouseInfo.unitPrice)
+            priceChanges.add(priceChangeVO)
+            logger.info("-----------价格有变化==--  {}", JSON.toJSONString(priceChangeVO))
+            var now = Date()
+            var priceChange = PriceChange()
+            priceChange.houseCode = oldHouseInfo.code
+            priceChange.totalPrice = oldHouseInfo.totalPrice
+            priceChange.unitPrice = oldHouseInfo.unitPrice
+            priceChange.createTime = now
+            priceChange.updateTime = now
+            priceChangeMapper.save(priceChange)
+            houseInfoMapper.updateByCode(houseInfo)
         }
     }
 

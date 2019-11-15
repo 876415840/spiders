@@ -32,8 +32,8 @@ class LotteryDataServiceImpl : RealtyDataService {
     override fun spiderData() {
         logger.info("爬取双色球数据-------------start")
 
-        val maxPeriod = shuangSeQiuMapper.getMaxPeriod()
-        runSpider(maxPeriod.toString().substring(2))
+//        val maxPeriod = shuangSeQiuMapper.getMaxPeriod()
+//        runSpider(maxPeriod.toString().substring(2))
 
         logger.info("爬取双色球数据-------------end")
     }
