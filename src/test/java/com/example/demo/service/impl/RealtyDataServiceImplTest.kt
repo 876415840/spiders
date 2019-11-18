@@ -1,9 +1,13 @@
 package com.example.demo.service.impl
 
+import com.alibaba.fastjson.JSON
 import com.example.demo.config.mq.rabbit.TestMqConfig
 import com.example.demo.entity.HouseInfo
+import com.example.demo.service.BallService
+import com.example.demo.service.LotteryService
 import com.example.demo.service.RabbitmqService
 import com.example.demo.service.RealtyDataService
+import com.google.common.collect.Lists
 import org.junit.runner.RunWith
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
@@ -27,6 +31,15 @@ class RealtyDataServiceImplTest {
 
     @Autowired
     lateinit var rabbitmqService: RabbitmqService
+
+    @Autowired
+    lateinit var lotteryService: LotteryService
+
+    @org.junit.Test
+    fun getBalls() {
+        var balls = lotteryService.getBalls()
+        LOGGER.info("===============双色球=================>{}", balls)
+    }
 
     @org.junit.Test
     fun spiderData() {
