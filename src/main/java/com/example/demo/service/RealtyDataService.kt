@@ -8,6 +8,8 @@ package com.example.demo.service
  */
 interface RealtyDataService {
 
+    fun getIndex(): Int
+
     /**
      * @Description: 爬取数据
      * @author mengqinghao

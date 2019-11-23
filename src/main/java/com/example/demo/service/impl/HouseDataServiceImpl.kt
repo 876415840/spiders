@@ -36,6 +36,10 @@ class HouseDataServiceImpl : RealtyDataService {
     @Value("\${spring.mail.to-mail}")
     private val toMail: String? = null
 
+    override fun getIndex(): Int {
+        return 0
+    }
+
     /**
      * @Description: 爬取数据
      * @author mengqinghao

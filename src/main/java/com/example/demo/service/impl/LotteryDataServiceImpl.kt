@@ -17,23 +17,33 @@ import org.springframework.stereotype.Service
  * @Date 2019/11/11 6:36 下午
  * @Version 1.0
  */
-@Service
+@Service("lotteryDataService")
 class LotteryDataServiceImpl : RealtyDataService {
 
     private val logger: Logger = LoggerFactory.getLogger(LotteryDataServiceImpl::class.java)
 
-    @Autowired
-    lateinit var springPipelineFactory: PipelineFactory
+    private var index = 0
 
     @Autowired
-    private
-    lateinit var shuangSeQiuMapper: ShuangSeQiuMapper
+    private lateinit var springPipelineFactory: PipelineFactory
+
+    @Autowired
+    private lateinit var shuangSeQiuMapper: ShuangSeQiuMapper
+
+    override fun getIndex(): Int {
+        return index
+    }
 
     override fun spiderData() {
+        index++
         logger.info("爬取双色球数据-------------start")
 
-        val maxPeriod = shuangSeQiuMapper.getMaxPeriod()
-        runSpider(maxPeriod.toString().substring(2))
+        try {
+            val maxPeriod = shuangSeQiuMapper.getMaxPeriod()
+            runSpider(maxPeriod.toString().substring(2))
+        } catch (e: Exception) {
+            logger.info("爬取双色球异常", e)
+        }
 
         logger.info("爬取双色球数据-------------end")
     }
@@ -54,9 +64,9 @@ class LotteryDataServiceImpl : RealtyDataService {
                 // 开始抓取的页面地址
                 .start(StringUtils.join("http://kaijiang.500.com/shtml/ssq/", start, ".shtml"))
                 // 开启几个爬虫线程
-                .thread(10)
+                .thread(2)
                 // 单个爬虫每次抓取完一个请求后的间隔时间
-                .interval(2000)
+                .interval(1)
                 //.loop(true) 是否循环抓取默认false
                 //.mobile(false) 表示使用移动端还是pc端的UserAgent。默认为false使用pc端的UserAgent
                 //                .start() // start 非阻塞启动  run 阻塞启动
