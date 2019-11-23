@@ -41,16 +41,13 @@ class HandleLottery : Pipeline<LotteryInfo> {
 
         var currentPeriod = Integer.valueOf(prefix + lotteryInfo.currentPeriod)
         if (currentPeriod > maxPeriod) {
-            if (lotteryInfo.trList!!.size == 2) {
-                var strs = lotteryInfo.trList!![1].split("</td>")
-                if (strs.size >= 2) {
-                    var redBalls = strs[1].replace("<td>", "").trim()
-                    var redBallArr = redBalls.split(" ")
-                    if (redBallArr.size == 6) {
-                        var shuangSeQiu = ShuangSeQiu(currentPeriod, redBallArr[0], redBallArr[1], redBallArr[2], redBallArr[3], redBallArr[4], redBallArr[5], lotteryInfo.blueBall)
-                        shuangSeQiuMapper.save(shuangSeQiu)
-                        logger.info("--------爬取{}期---红球{}---篮球{}", currentPeriod, redBallArr, lotteryInfo.blueBall)
-                    }
+            for (i in lotteryInfo.trList!!.indices){
+                var str = lotteryInfo.trList!![i]
+                var redBallArr = str.split(" ")
+                if (redBallArr.size == 6) {
+                    var shuangSeQiu = ShuangSeQiu(currentPeriod, redBallArr[0], redBallArr[1], redBallArr[2], redBallArr[3], redBallArr[4], redBallArr[5], lotteryInfo.blueBall)
+                    shuangSeQiuMapper.save(shuangSeQiu)
+                    logger.info("--------爬取{}期---红球{}---篮球{}", currentPeriod, redBallArr, lotteryInfo.blueBall)
                 }
             }
         }
@@ -71,4 +68,6 @@ class HandleLottery : Pipeline<LotteryInfo> {
             index--
         }
     }
+
+
 }

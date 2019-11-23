@@ -29,7 +29,7 @@ class LotteryInfo : HtmlBean {
     @HtmlField(cssPath = "div.ball_box01 > ul > li.ball_blue")
     var blueBall : String? = null
 
-    @HtmlField(cssPath = "table.kj_tablelist02 table tr")
+    @HtmlField(cssPath = "table.kj_tablelist02 td")
     var trList : List<String>? = null
 
 }
