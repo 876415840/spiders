@@ -15,5 +15,9 @@ enum class SingleMapEnum {
     val houseInfoByCode: MutableMap<String, HouseInfo> = mutableMapOf()
     val exceptions: MutableList<String> = ArrayList()
     val priceChanges: MutableList<PriceChangeVO> = ArrayList()
+    /**
+     * 双色球爬取失败记录
+     */
+    val lotteryFailed: MutableList<Int> = ArrayList()
 
 }

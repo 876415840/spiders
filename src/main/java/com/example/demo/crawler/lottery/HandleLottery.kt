@@ -1,6 +1,7 @@
 package com.example.demo.crawler.lottery
 
 import com.example.demo.entity.ShuangSeQiu
+import com.example.demo.enumerate.SingleMapEnum
 import com.example.demo.mapper.ShuangSeQiuMapper
 import com.geccocrawler.gecco.pipeline.Pipeline
 import com.geccocrawler.gecco.scheduler.DeriveSchedulerContext
@@ -41,6 +42,7 @@ class HandleLottery : Pipeline<LotteryInfo> {
 
         var currentPeriod = Integer.valueOf(prefix + lotteryInfo.currentPeriod)
         if (currentPeriod > maxPeriod) {
+            var success = false
             for (i in lotteryInfo.trList!!.indices){
                 var str = lotteryInfo.trList!![i]
                 var redBallArr = str.split(" ")
@@ -48,7 +50,15 @@ class HandleLottery : Pipeline<LotteryInfo> {
                     var shuangSeQiu = ShuangSeQiu(currentPeriod, redBallArr[0], redBallArr[1], redBallArr[2], redBallArr[3], redBallArr[4], redBallArr[5], lotteryInfo.blueBall)
                     shuangSeQiuMapper.save(shuangSeQiu)
                     logger.info("--------爬取{}期---红球{}---篮球{}", currentPeriod, redBallArr, lotteryInfo.blueBall)
+                    // 清除失败次数
+                    if (SingleMapEnum.SINGLE_DEMO.lotteryFailed.size > 0) {
+                        SingleMapEnum.SINGLE_DEMO.lotteryFailed.clear()
+                    }
+                    success = true
                 }
+            }
+            if (!success) {
+                SingleMapEnum.SINGLE_DEMO.lotteryFailed.add(currentPeriod)
             }
         }
 
@@ -59,11 +69,15 @@ class HandleLottery : Pipeline<LotteryInfo> {
     private fun skipNext(lotteryInfo: LotteryInfo?, prefix: String, maxPeriod: Int) {
         var periodList = lotteryInfo!!.periodList!!
         var index = periodList.size
+        var failedNum = 0
         while (index > 0) {
             var periodInfo = periodList[index - 1]
             if (Integer.valueOf(prefix + periodInfo.period) > maxPeriod) {
-                DeriveSchedulerContext.into(lotteryInfo.request!!.subRequest(StringUtils.join("http://kaijiang.500.com/shtml/ssq/", periodInfo.period, ".shtml")))
-                break
+                if (failedNum == SingleMapEnum.SINGLE_DEMO.lotteryFailed.size) {
+                    DeriveSchedulerContext.into(lotteryInfo.request!!.subRequest(StringUtils.join("http://kaijiang.500.com/shtml/ssq/", periodInfo.period, ".shtml")))
+                    break
+                }
+                failedNum++
             }
             index--
         }
