@@ -67,7 +67,7 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
                     updateOrSave(houseInfo, priceChanges)
                 }
             } catch (e: Exception) {
-                exceptions.add(e.message!!)
+                exceptions.add(StringUtils.join(e.message, " -> ", JSON.toJSONString(e.stackTrace)))
                 logger.error("处理页面数据异常", e)
             }
             skipPage(secondHandHouse, exceptions)
@@ -206,7 +206,7 @@ class HandleBjLianJiaSecondHandHouse : Pipeline<BjLianJiaSecondHandHouse> {
         }
         if (size >= 6) {
             var towerInfo = infos[5].trim()
-            if (StringUtils.isNotEmpty(towerInfo)) {
+            if (StringUtils.isNotEmpty(towerInfo) && towerInfo.indexOf("年建") != -1) {
                 houseInfo.year = towerInfo.replace("年建", "").trim().toInt()
             }
         }

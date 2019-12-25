@@ -160,7 +160,7 @@ class HouseDataServiceImpl : RealtyDataService {
         if (CollectionUtils.isNotEmpty(SingleMapEnum.SINGLE_DEMO.exceptions)) {
             var stringBuilder = StringBuilder()
             for (i in SingleMapEnum.SINGLE_DEMO.exceptions.indices) {
-                stringBuilder.append(SingleMapEnum.SINGLE_DEMO.exceptions[i]).append("---\n")
+                stringBuilder.append(SingleMapEnum.SINGLE_DEMO.exceptions[i]).append("---\n\n\n")
             }
             emailUtil.sendTextEmail(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString())
         }
