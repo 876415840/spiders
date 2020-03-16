@@ -59,23 +59,6 @@ spring:
       simple:
         concurrency: 1
         max-concurrency: 10
-  mail:
-    to-mail: @mail.to-mail@
-    host: smtp.qq.com
-    port: 465
-    username: @mail.username@
-    password: @mail.password@
-    default-encoding: UTF-8
-    properties:
-      mail:
-        smtp:
-          starttls:
-            enable: true
-            required: true
-          socketFactory:
-            port: 465
-            class: javax.net.ssl.SSLSocketFactory
-            fallback: false
 
 
 

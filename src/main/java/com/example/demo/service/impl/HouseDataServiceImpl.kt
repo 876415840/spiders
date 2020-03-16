@@ -1,13 +1,12 @@
 package com.example.demo.service.impl
 
+import cn.hutool.extra.mail.MailUtil
 import com.example.demo.enumerate.SingleMapEnum
 import com.example.demo.service.RealtyDataService
-import com.example.demo.util.EmailUtil
 import com.example.demo.vo.PriceChangeVO
 import com.geccocrawler.gecco.GeccoEngine
 import com.geccocrawler.gecco.pipeline.PipelineFactory
 import org.apache.commons.collections.CollectionUtils
-import org.apache.commons.lang3.StringUtils
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -28,10 +27,6 @@ class HouseDataServiceImpl : RealtyDataService {
     private val logger: Logger = LoggerFactory.getLogger(HouseDataServiceImpl::class.java)
 
     @Autowired lateinit var springPipelineFactory: PipelineFactory
-
-    @Autowired
-    private
-    lateinit var emailUtil: EmailUtil
 
     @Value("\${spring.mail.to-mail}")
     private val toMail: String? = null
@@ -104,7 +99,7 @@ class HouseDataServiceImpl : RealtyDataService {
             }
             var upDesc = getUpDesc(up, upPrices, upScale)
             var downDesc = getDownDesc(down, downPrices, downScale)
-            emailUtil.sendTextEmail(toMail, StringUtils.join("北京二手房价格今天发生变化"), StringBuilder(upDesc).append("\n\n").append(downDesc).append("\n\n\n").append(upMesage).append("\n\n\n").append(downMessage).toString())
+            MailUtil.send(toMail, "北京二手房价格今天发生变化", StringBuilder(upDesc).append("\n\n").append(downDesc).append("\n\n\n").append(upMesage).append("\n\n\n").append(downMessage).toString(), false, null)
         }
     }
 
@@ -162,7 +157,7 @@ class HouseDataServiceImpl : RealtyDataService {
             for (i in SingleMapEnum.SINGLE_DEMO.exceptions.indices) {
                 stringBuilder.append(SingleMapEnum.SINGLE_DEMO.exceptions[i]).append("---\n\n\n")
             }
-            emailUtil.sendTextEmail(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString())
+            MailUtil.send(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString(), false, null)
         }
     }
 

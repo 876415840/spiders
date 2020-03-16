@@ -37,11 +37,6 @@
 			<scope>test</scope>
 		</dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
-        </dependency>
-
         <!-- 自动生成代码 -->
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
@@ -136,6 +131,13 @@
             <version>1.2.3</version>
         </dependency>
 
+        <!-- Hutool工具包 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+
         <!-- gecco爬虫 -->
         <dependency>
             <groupId>com.geccocrawler</groupId>
@@ -169,6 +171,7 @@
                 <includes>
                     <include>**/*.yml</include>
                     <include>**/*.ftl</include>
+                    <include>config/mail.setting</include>
                 </includes>
             </resource>
         </resources>
