@@ -59,6 +59,8 @@ spring:
       simple:
         concurrency: 1
         max-concurrency: 10
+  mail:
+    to-mail: @mail.to-mail@
 
 
 
