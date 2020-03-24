@@ -99,7 +99,7 @@ class HouseDataServiceImpl : RealtyDataService {
             }
             var upDesc = getUpDesc(up, upPrices, upScale)
             var downDesc = getDownDesc(down, downPrices, downScale)
-            MailUtil.send(toMail, "北京二手房价格今天发生变化", StringBuilder(upDesc).append("\n\n").append(downDesc).append("\n\n\n").append(upMesage).append("\n\n\n").append(downMessage).toString(), false, null)
+            MailUtil.send(toMail, "北京二手房价格今天发生变化", StringBuilder(upDesc).append("\n\n").append(downDesc).append("\n\n\n").append(upMesage).append("\n\n\n").append(downMessage).toString(), false)
         }
     }
 
@@ -157,7 +157,7 @@ class HouseDataServiceImpl : RealtyDataService {
             for (i in SingleMapEnum.SINGLE_DEMO.exceptions.indices) {
                 stringBuilder.append(SingleMapEnum.SINGLE_DEMO.exceptions[i]).append("---\n\n\n")
             }
-            MailUtil.send(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString(), false, null)
+            MailUtil.send(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString(), false)
         }
     }
 
