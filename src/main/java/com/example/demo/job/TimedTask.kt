@@ -17,7 +17,9 @@ class TimedTask {
     @Autowired lateinit var realtyDataServices: Map<String, RealtyDataService>
 
     /**
-     * @Description: 凌晨定时任务
+     * 定时任务
+     *
+     * 9点11分31秒
      * @author mengqinghao
      * @param: 
      * @date 2018/12/24 7:26 PM

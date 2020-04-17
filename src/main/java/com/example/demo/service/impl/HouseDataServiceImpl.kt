@@ -1,17 +1,27 @@
 package com.example.demo.service.impl
 
+import cn.hutool.extra.mail.GlobalMailAccount
 import cn.hutool.extra.mail.MailUtil
 import com.example.demo.enumerate.SingleMapEnum
 import com.example.demo.service.RealtyDataService
 import com.example.demo.vo.PriceChangeVO
 import com.geccocrawler.gecco.GeccoEngine
 import com.geccocrawler.gecco.pipeline.PipelineFactory
+import com.google.common.collect.Lists
+import com.google.common.collect.Maps
 import org.apache.commons.collections.CollectionUtils
+import org.jfree.chart.ChartFactory
+import org.jfree.chart.ChartUtils
+import org.jfree.data.category.DefaultCategoryDataset
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
+import java.io.ByteArrayInputStream
+import java.io.ByteArrayOutputStream
+import java.io.IOException
+import java.io.InputStream
 import java.math.BigDecimal
 
 
@@ -78,29 +88,82 @@ class HouseDataServiceImpl : RealtyDataService {
             var downPrices = ArrayList<Int>()
             var upScale = ArrayList<Int>()
             var downScale = ArrayList<Int>()
+            var housingEstatePrices = HashMap<String, Map<String, List<Int>>>()
             for (i in SingleMapEnum.SINGLE_DEMO.priceChanges.indices) {
                 var priceChangeVO = SingleMapEnum.SINGLE_DEMO.priceChanges[i]
                 if (priceChangeVO.oldTotalPrice!! != priceChangeVO.totalPrice!!) {
                     var risePrice: Boolean = priceChangeVO.oldTotalPrice!! < priceChangeVO.totalPrice!!
+                    var unitPrices = HashMap<String, List<Int>>()
+                    var oldUnitPrices = housingEstatePrices[priceChangeVO.housingEstate!!]
+                    if (oldUnitPrices != null) {
+                        unitPrices = oldUnitPrices as HashMap<String, List<Int>>
+                    } else {
+                        housingEstatePrices[priceChangeVO.housingEstate!!] = unitPrices
+                    }
                     if (risePrice) {
                         var changePrice = priceChangeVO.totalPrice!! - priceChangeVO.oldTotalPrice!!
                         putMessage(upMesage, priceChangeVO, changePrice, risePrice)
                         upPrices.add(changePrice)
                         upScale.add(changePrice * 1000 / priceChangeVO.totalPrice!!)
+                        var list: ArrayList<Int>?
+                        if (unitPrices["up"] == null) {
+                            list = ArrayList<Int>()
+                            unitPrices["up"] = list
+                        } else {
+                            list = unitPrices["up"] as ArrayList<Int>
+                        }
+                        list.add(changePrice * 100 / priceChangeVO.totalPrice!!)
                         up++
                     } else {
                         var changePrice = priceChangeVO.oldTotalPrice!! - priceChangeVO.totalPrice!!
                         putMessage(downMessage, priceChangeVO, changePrice, risePrice)
                         downPrices.add(changePrice)
                         downScale.add(changePrice * 1000 / priceChangeVO.oldTotalPrice!!)
+                        var list: ArrayList<Int>?
+                        if (unitPrices["down"] == null) {
+                            list = ArrayList<Int>()
+                            unitPrices["down"] = list
+                        } else {
+                            list = unitPrices["down"] as ArrayList<Int>
+                        }
+                        list.add(changePrice * 100 / priceChangeVO.totalPrice!!)
                         down++
                     }
                 }
             }
             var upDesc = getUpDesc(up, upPrices, upScale)
             var downDesc = getDownDesc(down, downPrices, downScale)
-            MailUtil.send(toMail, "北京二手房价格今天发生变化", StringBuilder(upDesc).append("\n\n").append(downDesc).append("\n\n\n").append(upMesage).append("\n\n\n").append(downMessage).toString(), false)
+
+            val images: MutableMap<String, InputStream> = getImages(housingEstatePrices)
+            var content = StringBuilder(upDesc).append("\n\n").append(downDesc).append("\n\n\n").append(upMesage).append("\n\n\n").append(downMessage).toString()
+            MailUtil.send(GlobalMailAccount.INSTANCE.account, Lists.newArrayList(toMail), null, null, "北京二手房价格今天发生变化", content, images, false)
+
         }
+    }
+
+    private fun getImages(housingEstatePrices: HashMap<String, Map<String, List<Int>>>): MutableMap<String, InputStream> {
+        //创建饼图数据对象
+        val dfp = DefaultCategoryDataset()
+        housingEstatePrices.forEach {
+            var ups = it.value["up"]
+            if (ups != null) {
+                dfp.setValue(ups.average(), "上涨", it.key)
+            }
+            var downs = it.value["down"]
+            if (downs != null) {
+                dfp.setValue(downs.average(), "下降", it.key)
+            }
+        }
+
+        //Create JFreeChart object
+        val jFreeChart = ChartFactory.createBarChart("今日房价变化", "小区", "变化比例(%)", dfp)
+
+        val out = ByteArrayOutputStream()
+        ChartUtils.writeChartAsJPEG(out, jFreeChart, 1000, 800)
+        val input = ByteArrayInputStream(out.toByteArray())
+        val images: MutableMap<String, InputStream> = Maps.newHashMap()
+        images["变化图.jpeg"] = input
+        return images
     }
 
     private fun putMessage(upMesage: StringBuilder, priceChangeVO: PriceChangeVO, changePrice: Int, risePrice: Boolean) {
