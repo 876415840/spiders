@@ -94,11 +94,11 @@ class HouseDataServiceImpl : RealtyDataService {
                 if (priceChangeVO.oldTotalPrice!! != priceChangeVO.totalPrice!!) {
                     var risePrice: Boolean = priceChangeVO.oldTotalPrice!! < priceChangeVO.totalPrice!!
                     var unitPrices = HashMap<String, List<Int>>()
-                    var oldUnitPrices = housingEstatePrices[priceChangeVO.housingEstate!!]
+                    var oldUnitPrices = housingEstatePrices[priceChangeVO.area!!]
                     if (oldUnitPrices != null) {
                         unitPrices = oldUnitPrices as HashMap<String, List<Int>>
                     } else {
-                        housingEstatePrices[priceChangeVO.housingEstate!!] = unitPrices
+                        housingEstatePrices[priceChangeVO.area!!] = unitPrices
                     }
                     if (risePrice) {
                         var changePrice = priceChangeVO.totalPrice!! - priceChangeVO.oldTotalPrice!!
