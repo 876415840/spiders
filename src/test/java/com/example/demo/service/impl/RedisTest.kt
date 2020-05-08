@@ -28,7 +28,7 @@ class RedisTest {
     @Test
     fun test() {
         redisTemplate.opsForValue().set("key1","value1")
-        val value: String = redisTemplate.opsForValue().get("key1")
+        val value: String? = redisTemplate.opsForValue().get("key1")
         LOGGER.info("=========> {}", value)
     }
 

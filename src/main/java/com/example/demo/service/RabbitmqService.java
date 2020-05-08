@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
-import org.springframework.amqp.rabbit.support.CorrelationData;
+
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 
 /**
  * @Description

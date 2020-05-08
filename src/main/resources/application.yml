@@ -1,21 +1,18 @@
 server:
   port: 443 #SSL端口
   ssl:
-    key-store: classpath:3880169_www.win-guang.com.pfx
-    key-password: @ssl.key.password@
+    key-store: classpath:www.win-guang.com.pfx
+    key-store-password: @ssl.key.password@
     key-store-type: PKCS12
-  useForwardHeaders: true
   tomcat:
     uriEncoding: UTF-8
-  session:
-    timeout: 36000
 
 spring:
   datasource:
     url: @db.url@
     username: @db.username@
     password: @db.password@
-    driverClassName: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
     filters: stat
@@ -57,7 +54,6 @@ spring:
     virtual-host: spiders
     username: @rabbitmq.username@
     password: @rabbitmq.password@
-    publisher-confirms: true
     publisher-returns: true
     listener:
       simple:
@@ -84,6 +80,6 @@ pagehelper:
 
 ################################  log  ##################################
 logging:
-  file: logger.log
-  level: debug
+  level:
+    root: info
 #########################################################################

@@ -23,7 +23,7 @@ class SpringPipelineFactory :  PipelineFactory, ApplicationContextAware {
 
     override fun getPipeline(name: String?): Pipeline<out SpiderBean>? {
         try {
-            val bean = applicationContext!!.getBean(name)
+            val bean = name?.let { applicationContext!!.getBean(it) }
             if (bean is Pipeline<*>) {
                 return bean
             }
@@ -33,7 +33,7 @@ class SpringPipelineFactory :  PipelineFactory, ApplicationContextAware {
         return null
     }
 
-    override fun setApplicationContext(applicationContext: ApplicationContext?) {
-         this.applicationContext = applicationContext
+    override fun setApplicationContext(applicationContext: ApplicationContext) {
+        this.applicationContext = applicationContext
     }
 }

@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
 
 import org.slf4j.LoggerFactory
-import org.springframework.amqp.rabbit.support.CorrelationData
+import org.springframework.amqp.rabbit.connection.CorrelationData
 import org.springframework.beans.factory.annotation.Autowired
 
 /**
@@ -54,7 +54,7 @@ class RealtyDataServiceImplTest {
         var houseInfo = HouseInfo()
         houseInfo.title = "测试标题"
         var correlationData = CorrelationData()
-        correlationData.id = "test_corre_id_1"
+        correlationData.setId("test_corre_id_1")
         // exchange,queue 都正确,confirm被回调, ack=true
         rabbitmqService.convertAndSend(TestMqConfig.EXCHANGE_TEST, TestMqConfig.QUEUE_TEST, houseInfo, correlationData)
         LOGGER.info("=======1=========================>{}", "test")
