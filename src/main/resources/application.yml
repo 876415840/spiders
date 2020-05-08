@@ -1,5 +1,9 @@
 server:
-  port: 9527
+  port: 443 #SSL端口
+  ssl:
+    key-store: classpath:3880169_www.win-guang.com.pfx
+    key-password: @ssl.key.password@
+    key-store-type: PKCS12
   useForwardHeaders: true
   tomcat:
     uriEncoding: UTF-8
