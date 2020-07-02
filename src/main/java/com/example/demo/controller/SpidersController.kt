@@ -1,5 +1,8 @@
 package com.example.demo.controller
 
+import com.example.demo.service.RealtyDataService
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -14,9 +17,13 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/spiders")
 class SpidersController {
 
-    @GetMapping("/realtyInfo")
-    fun realtyInfo(): String {
+    @Autowired
+    @Qualifier("houseTransactionService")
+    lateinit var houseTransactionService: RealtyDataService
 
-        return "nothing"
+    @GetMapping("/task")
+    fun realtyInfo(): String {
+        houseTransactionService.spiderData()
+        return "ok"
     }
 }

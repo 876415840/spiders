@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service
  * @Author MengQingHao
  * @Date 2020/7/2 2:53 下午
  */
-@Service
+@Service("houseTransactionService")
 class HouseTransactionServiceImpl: RealtyDataService {
 
     private val logger: Logger = LoggerFactory.getLogger(HouseTransactionServiceImpl::class.java)
