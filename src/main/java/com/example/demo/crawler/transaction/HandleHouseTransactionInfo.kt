@@ -56,6 +56,9 @@ class HandleHouseTransactionInfo : Pipeline<HouseTransactionInfo> {
                 if (arry.size == 2) {
                     val str = arry[1]
                     val labelVal = arry[0].replace("<label>", "").trim()
+                    if (labelVal == "暂无数据") {
+                        continue
+                    }
                     if (str == "挂牌价格（万）") {
                         transactionInfo.stickerPrice = BigDecimal(10000).multiply(BigDecimal(labelVal)).toInt()
                     } else if (str == "成交周期（天）") {

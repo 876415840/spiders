@@ -1,6 +1,7 @@
 package com.example.demo.job
 
 import com.example.demo.service.RealtyDataService
+import com.example.demo.service.WarnService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Component
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Component
 class TimedTask {
 
     @Autowired lateinit var realtyDataServices: Map<String, RealtyDataService>
+    @Autowired lateinit var warnServices: Map<String, WarnService>
 
     /**
      * 定时任务
@@ -30,5 +32,10 @@ class TimedTask {
         for (service in realtyDataServices.values) {
             service.spiderData()
         }
+
+        for (service in warnServices.values) {
+            service.jobWarn()
+        }
+
     }
 }

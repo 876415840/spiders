@@ -7,7 +7,7 @@ CREATE TABLE `transaction_info` (
   `sticker_price` int(11) NOT NULL COMMENT '挂牌价（元）',
   `adjust_count` tinyint(3) DEFAULT NULL COMMENT '调价次数',
   `look_count` int(11) DEFAULT NULL COMMENT '带看次数',
-  `follow` tinyint(3) DEFAULT NULL COMMENT '关注人数',
+  `follow` int(11) DEFAULT NULL COMMENT '关注人数',
   `create_time` datetime NOT NULL COMMENT '创建时间',
   `update_time` datetime NOT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`),
