@@ -23,7 +23,7 @@ interface HouseInfoMapper{
     ])
 
     @Select("select * from "+ HouseInfo.TABLE_NAME +" where code = #{code}")
-    fun getByCode(@Param("code") code: String): HouseInfo
+    fun getByCode(@Param("code") code: String): HouseInfo?
 
     @Insert("insert into "+ HouseInfo.TABLE_NAME +"(title,code,housing_estate,specification,size,orientation,decoration_type,elevator,storey_type,year,tower_type,area,total_price,type,unit_price,subway,vr,taxfree,any_time,create_time,update_time) " +
             "values(#{houseInfo.title},#{houseInfo.code},#{houseInfo.housingEstate},#{houseInfo.specification},#{houseInfo.size},#{houseInfo.orientation},#{houseInfo.decorationType},#{houseInfo.elevator},#{houseInfo.storeyType}," +

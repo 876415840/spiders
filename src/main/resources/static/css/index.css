@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.agreement-title {
+    text-align: center;
+    height: 48px;
+    font-size: 40px;
+    font-weight: 500;
+    color: rgba(51,51,51,1);
+    line-height:48px;
+    margin: 48px 0;
+}
+.agreement-content {
+    font-size: 29px;
+    color: rgba(51,51,51,1);
+    line-height:48px;
+    padding: 0 150px;
+}
+.content-next {
+    padding: 0 32px;
+}
+.fw {
+    font-weight: bold;
+}

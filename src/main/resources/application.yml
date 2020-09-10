@@ -8,6 +8,10 @@ server:
     uriEncoding: UTF-8
 
 spring:
+  mvc:
+    view:
+      prefix: /view/
+      suffix: .html
   datasource:
     url: @db.url@
     username: @db.username@
@@ -81,5 +85,5 @@ pagehelper:
 ################################  log  ##################################
 logging:
   level:
-    root: info
+    root: debug
 #########################################################################

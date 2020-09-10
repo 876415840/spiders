@@ -4,6 +4,7 @@ import com.example.demo.enumerate.IndividualIncomeTaxLevelEnum
 import com.example.demo.service.TaxComputeService
 import org.springframework.stereotype.Service
 import java.math.BigDecimal
+import java.math.RoundingMode
 
 /**
  * @Description 税额计算接口实现
@@ -44,7 +45,7 @@ class TaxComputeServiceImpl: TaxComputeService {
         price = price.multiply(BigDecimal(month))
         var taxLevelEnum = IndividualIncomeTaxLevelEnum.priceOf(price)
         var tax = price.multiply(BigDecimal(taxLevelEnum!!.tax)).divide(BigDecimal(100))
-        tax = tax.setScale(2,BigDecimal.ROUND_HALF_UP)
+        tax = tax.setScale(2, RoundingMode.HALF_UP)
         return tax
 
 
