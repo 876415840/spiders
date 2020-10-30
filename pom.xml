@@ -153,6 +153,14 @@
             <version>1.3.0</version>
         </dependency>
 
+        <!--爬取网页信息-手动-->
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit -->
+        <dependency>
+            <groupId>net.sourceforge.htmlunit</groupId>
+            <artifactId>htmlunit</artifactId>
+            <version>2.34.1</version>
+        </dependency>
+
         <!-- jfree图表插件  https://mvnrepository.com/artifact/org.jfree/jfreechart -->
         <dependency>
             <groupId>org.jfree</groupId>
