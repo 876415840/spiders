@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.lang.Character.UnicodeBlock
 import java.util.*
+import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
@@ -48,13 +49,15 @@ class BossZhiPinService : JobService {
             } else if (char >= 'A' && char <= 'Z') {
                 char += 32
                 save = true
-            } else if (isChinese(char)) {
+            } else if (isChinese(char) || sepa(char)) {
                 save = false
             }
-            if (save) {
+            if (save && char != ' ') {
                 sb.append(char)
             } else if (sb.isNotBlank()) {
-                list.add(sb.toString())
+                if (sb.length < 32) {
+                    list.add(sb.toString())
+                }
                 sb.clear()
             }
         }
@@ -97,16 +100,16 @@ class BossZhiPinService : JobService {
         var map = toCountMap(result)
         logger.info("================================技术要求明细统计====================================={}", map.size)
         var now = Date()
-        map.forEach { (k: String, v: Int) -> {
-            logger.info("{} -> {}", k, v)
+        for (entry in map) {
+            logger.info("{} -> {}", entry.key, entry.value)
             var jobDetail = JobDetail()
-            jobDetail.techTerm = k
-            jobDetail.count = v
+            jobDetail.techTerm = entry.key
+            jobDetail.count = entry.value
             jobDetail.tag = "java"
             jobDetail.createTime = now
             jobDetail.updateTime = now
             jobDetailMapper.save(jobDetail)
-        } }
+        }
     }
 
     fun handlePageDetail(html: String) : MutableList<String> {
@@ -114,6 +117,7 @@ class BossZhiPinService : JobService {
 
         var details: MutableList<String>  = ArrayList()
         for (detailUrl in detailUrls) {
+            TimeUnit.SECONDS.sleep(Random(10).nextLong())
             details.addAll(handleDetails(detailUrl))
         }
         return details
@@ -172,8 +176,13 @@ class BossZhiPinService : JobService {
 
     private fun isChinese(c: Char): Boolean {
         val ub = UnicodeBlock.of(c)
-        return if (ub === UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS || ub === UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS || ub === UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A || ub === UnicodeBlock.GENERAL_PUNCTUATION || ub === UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION || ub === UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS) {
-            true
-        } else false
+        return ub === UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS || ub === UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS || ub === UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A || ub === UnicodeBlock.GENERAL_PUNCTUATION || ub === UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION || ub === UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS
+    }
+    private fun sepa(c: Char): Boolean {
+        return when (c) {
+            ',', ';'
+            -> true
+            else -> false
+        }
     }
 }
