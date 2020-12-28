@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.math.BigDecimal
 import java.util.*
+import java.util.regex.Pattern
 
 /**
  * @Description TODO
@@ -42,6 +43,7 @@ class HandleHouseTransactionInfo : Pipeline<HouseTransactionInfo> {
             logger.warn("---------没有找到内容-------应该是未成交")
             return
         }
+        var msg: String = "nothing"
         try {
             val now = Date()
             val transactionInfo =  TransactionInfo()
@@ -51,12 +53,12 @@ class HandleHouseTransactionInfo : Pipeline<HouseTransactionInfo> {
             transactionInfo.transactionDate = houseTransactionInfo.transactionDate
             transactionInfo.dealPrice = houseTransactionInfo.dealTotalPrice
             for (i in houseTransactionInfo.msg!!.indices) {
-                val msg = houseTransactionInfo.msg!![i]
+                msg = houseTransactionInfo.msg!![i]
                 val arry = msg.split("</label>")
                 if (arry.size == 2) {
                     val str = arry[1]
                     val labelVal = arry[0].replace("<label>", "").trim()
-                    if (labelVal == "暂无数据") {
+                    if (!Pattern.matches("^(\\d+)(.?\\d+)$", labelVal)) {
                         continue
                     }
                     if (str == "挂牌价格（万）") {
@@ -74,7 +76,7 @@ class HandleHouseTransactionInfo : Pipeline<HouseTransactionInfo> {
             }
             transactionInfoMapper.save(transactionInfo)
         } catch (e: Exception) {
-            logger.error("保存交易信息异常 - code:{}", houseCode, e)
+            logger.error("保存交易信息异常 - msg:【{}】", msg, e)
         }
     }
 

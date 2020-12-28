@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class LoginController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String index(ModelMap modelMap){
         log.info("------------------ {} ----------------", "longin");
         modelMap.addAttribute("key", "test");
+        // TODO:MQH 2020/12/28 not right
         return "index";
     }
 }
