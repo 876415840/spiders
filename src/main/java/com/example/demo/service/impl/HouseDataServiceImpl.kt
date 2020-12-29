@@ -136,7 +136,11 @@ class HouseDataServiceImpl : RealtyDataService {
 
             val images: MutableMap<String, InputStream> = getImages(housingEstatePrices)
             var content = StringBuilder(upDesc).append("\n\n").append(downDesc).append("\n\n\n").append(upMesage).append("\n\n\n").append(downMessage).toString()
-            MailUtil.send(GlobalMailAccount.INSTANCE.account, Lists.newArrayList(toMail), null, null, "北京二手房价格今天发生变化", content, images, false)
+            try {
+                MailUtil.send(GlobalMailAccount.INSTANCE.account, Lists.newArrayList(toMail), null, null, "北京二手房价格今天发生变化", content, images, false)
+            } catch (e: Exception) {
+                com.example.demo.util.MailUtil.send(toMail, "北京二手房价格今天发生变化", content)
+            }
 
         }
     }
@@ -220,7 +224,11 @@ class HouseDataServiceImpl : RealtyDataService {
             for (i in SingleMapEnum.SINGLE_DEMO.exceptions.indices) {
                 stringBuilder.append(SingleMapEnum.SINGLE_DEMO.exceptions[i]).append("---\n\n\n")
             }
-            MailUtil.send(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString(), false)
+            try {
+                MailUtil.send(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString(), false)
+            } finally {
+                com.example.demo.util.MailUtil.send(toMail, "【宇宙第一帅】你的爬虫出异常了", stringBuilder.toString())
+            }
         }
     }
 
