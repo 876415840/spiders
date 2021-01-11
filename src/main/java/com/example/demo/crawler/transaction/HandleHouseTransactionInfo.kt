@@ -40,7 +40,6 @@ class HandleHouseTransactionInfo : Pipeline<HouseTransactionInfo> {
     override fun process(houseTransactionInfo: HouseTransactionInfo?) {
         val houseCode =  houseTransactionInfo!!.houseCode;
         if (StringUtils.isBlank(houseCode)) {
-            logger.warn("---------没有找到内容-------应该是未成交")
             return
         }
         var msg: String = "nothing"
