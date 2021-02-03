@@ -3,10 +3,7 @@ package com.example.demo.service.impl
 import com.alibaba.fastjson.JSON
 import com.example.demo.config.mq.rabbit.TestMqConfig
 import com.example.demo.entity.HouseInfo
-import com.example.demo.service.BallService
-import com.example.demo.service.LotteryService
-import com.example.demo.service.RabbitmqService
-import com.example.demo.service.RealtyDataService
+import com.example.demo.service.*
 import com.google.common.collect.Lists
 import org.junit.runner.RunWith
 import org.springframework.boot.test.context.SpringBootTest
@@ -30,6 +27,9 @@ class RealtyDataServiceImplTest {
     lateinit var realtyDataServices: Map<String, RealtyDataService>
 
     @Autowired
+    lateinit var warnServices: Map<String, WarnService>
+
+    @Autowired
     lateinit var rabbitmqService: RabbitmqService
 
     @Autowired
@@ -46,7 +46,12 @@ class RealtyDataServiceImplTest {
         for (service in realtyDataServices.values) {
             service.spiderData()
         }
-        LOGGER.info("================================>{}", "test")
+
+        LOGGER.info("================================> {}", "spiderData -- job")
+        for (service in warnServices.values) {
+            service.jobWarn()
+        }
+        LOGGER.info("================================> {}", "jobWarn")
     }
 
     @org.junit.Test
