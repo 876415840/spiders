@@ -25,7 +25,7 @@ enum class IndividualIncomeTaxLevelEnum(val level:Int, val beginPrice:Int, val e
             for (enum in enums){
                 var begin = BigDecimal(enum.beginPrice)
                 var end = BigDecimal(enum.endPrice)
-                if(end.compareTo(price) >= 0 && begin.compareTo(price) < 0){
+                if(begin < price && price <= end){
                     return enum
                 }
             }
