@@ -43,7 +43,7 @@ class TaxComputeController {
             if (1 == i) {
                 var tips = taxInfo?.get("tips")
                 if (tips!!.isNotEmpty()) {
-                    sb.append("http://xxxx/taxCompute/personal/xxxx? --- 在后面添加参数 <br><br>").append(tips).append("<br><br><br>")
+                    sb.append("http://xxxx/taxCompute/personal/xxxx? --- 在后面添加以下参数修改默认值 <br><br>").append(tips).append("<br><br><br>")
                 }
                 sb.append("月薪 ：").append(amount).append("；扣缴基数：").append(taxInfo?.get("base")).append("；专项扣除：")
                         .append(taxInfo?.get("other")).append("；起征额：").append(taxInfo?.get("start"))
