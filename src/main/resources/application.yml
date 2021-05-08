@@ -1,5 +1,5 @@
 server:
-  port: 443 #SSL端口
+  port: 8443 #SSL端口 跟服务器独立tomcat443端口冲突，暂时先用这个
   ssl:
     key-store: classpath:www.win-guang.com.pfx
     key-store-password: @ssl.key.password@
@@ -8,6 +8,15 @@ server:
     uriEncoding: UTF-8
 
 spring:
+  thymeleaf:
+    prefix: classpath:/view/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    # 开发阶段务必关闭缓存
+    cache: false
   datasource:
     url: @db.url@
     username: @db.username@

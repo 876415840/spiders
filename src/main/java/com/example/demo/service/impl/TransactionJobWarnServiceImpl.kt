@@ -25,7 +25,11 @@ class TransactionJobWarnServiceImpl: WarnService {
     override fun jobWarn() {
         val transactionCount = transactionInfoMapper.todayTransactionCount()
         if (transactionCount > 0) {
-            MailUtil.send(toMail, "新增成交数$transactionCount", "nothing", false)
+            try {
+                MailUtil.send(toMail, "新增成交数$transactionCount", "nothing", false)
+            } catch (e: Exception) {
+                com.example.demo.util.MailUtil.send(toMail, "新增成交数$transactionCount", "nothing")
+            }
         }
     }
 }
