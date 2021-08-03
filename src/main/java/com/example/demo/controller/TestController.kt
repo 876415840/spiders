@@ -1,10 +1,9 @@
 package com.example.demo.controller
 
-import com.example.demo.service.JobService
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import java.net.InetAddress
 
 /**
  *
@@ -16,12 +15,8 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/test")
 class TestController {
 
-    @Autowired
-    lateinit var bossZhiPinService: JobService
-
     @GetMapping("/test")
     fun spidersOldNumbers(): String {
-        bossZhiPinService.spiderData()
-        return "处理完"
+        return InetAddress.getLocalHost().hostAddress
     }
 }

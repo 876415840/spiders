@@ -1,9 +1,9 @@
 server:
-  port: 8443 #SSL端口 跟服务器独立tomcat443端口冲突，暂时先用这个
-  ssl:
-    key-store: classpath:www.win-guang.com.pfx
-    key-store-password: @ssl.key.password@
-    key-store-type: PKCS12
+  port: 9527 #SSL端口 跟服务器独立tomcat443端口冲突，暂时先用这个
+#  ssl:
+#    key-store: classpath:www.win-guang.com.pfx
+#    key-store-password: @ssl.key.password@
+#    key-store-type: PKCS12
   tomcat:
     uriEncoding: UTF-8
 
