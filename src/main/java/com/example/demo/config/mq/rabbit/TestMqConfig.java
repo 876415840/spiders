@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date 2019/8/8 2:11 PM
  * @Version 1.0
  */
-@Configuration
+//@Configuration
 public class TestMqConfig {
 
     public final static String EXCHANGE_TEST = "exchange.test";

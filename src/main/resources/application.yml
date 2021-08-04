@@ -62,16 +62,16 @@ spring:
         min-idle: 0
     # 连接超时时间(毫秒)
     timeout: 1000
-  rabbitmq:
-    addresses: @rabbitmq.addresses@
-    virtual-host: spiders
-    username: @rabbitmq.username@
-    password: @rabbitmq.password@
-    publisher-returns: true
-    listener:
-      simple:
-        concurrency: 1
-        max-concurrency: 10
+#  rabbitmq:
+#    addresses: @rabbitmq.addresses@
+#    virtual-host: spiders
+#    username: @rabbitmq.username@
+#    password: @rabbitmq.password@
+#    publisher-returns: true
+#    listener:
+#      simple:
+#        concurrency: 1
+#        max-concurrency: 10
   mail:
     to-mail: @mail.to-mail@
 

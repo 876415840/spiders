@@ -54,7 +54,7 @@ class RealtyDataServiceImplTest {
         LOGGER.info("================================> {}", "jobWarn")
     }
 
-    @org.junit.Test
+//    @org.junit.Test
     fun mq() {
         var houseInfo = HouseInfo()
         houseInfo.title = "测试标题"

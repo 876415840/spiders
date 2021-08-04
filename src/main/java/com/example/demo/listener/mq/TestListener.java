@@ -13,12 +13,12 @@ import org.springframework.stereotype.Component;
  * @Date 2019/8/8 5:52 PM
  * @Version 1.0
  */
-@Component
+//@Component
 @Slf4j
 public class TestListener {
 
-    @RabbitHandler
-    @RabbitListener(queues = TestMqConfig.QUEUE_TEST)
+//    @RabbitHandler
+//    @RabbitListener(queues = TestMqConfig.QUEUE_TEST)
     public void testExecute(Object obj) throws Exception {
         log.info("=========================>{}", JSON.toJSONString(obj));
     }
