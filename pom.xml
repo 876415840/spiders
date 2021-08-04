@@ -286,9 +286,6 @@
                 <db.password>password</db.password>
                 <redis.host>localhost</redis.host>
                 <redis.password>password</redis.password>
-                <rabbitmq.addresses>localhost:port</rabbitmq.addresses>
-                <rabbitmq.username>username</rabbitmq.username>
-                <rabbitmq.password>password</rabbitmq.password>
                 <mail.username>mail.username</mail.username>
                 <mail.password>mail.password</mail.password>
                 <mail.to-mail>mail.to-mail</mail.to-mail>
