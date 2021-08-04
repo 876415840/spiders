@@ -1,17 +1,13 @@
 package com.example.demo.service.impl
 
-import com.alibaba.fastjson.JSON
-import com.example.demo.config.mq.rabbit.TestMqConfig
-import com.example.demo.entity.HouseInfo
-import com.example.demo.service.*
-import com.google.common.collect.Lists
+import com.example.demo.service.LotteryService
+import com.example.demo.service.RealtyDataService
+import com.example.demo.service.WarnService
 import org.junit.runner.RunWith
+import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
-
-import org.slf4j.LoggerFactory
-import org.springframework.amqp.rabbit.connection.CorrelationData
-import org.springframework.beans.factory.annotation.Autowired
 
 /**
  * @Description
@@ -28,9 +24,6 @@ class RealtyDataServiceImplTest {
 
     @Autowired
     lateinit var warnServices: Map<String, WarnService>
-
-    @Autowired
-    lateinit var rabbitmqService: RabbitmqService
 
     @Autowired
     lateinit var lotteryService: LotteryService
@@ -52,29 +45,6 @@ class RealtyDataServiceImplTest {
             service.jobWarn()
         }
         LOGGER.info("================================> {}", "jobWarn")
-    }
-
-//    @org.junit.Test
-    fun mq() {
-        var houseInfo = HouseInfo()
-        houseInfo.title = "测试标题"
-        var correlationData = CorrelationData()
-        correlationData.setId("test_corre_id_1")
-        // exchange,queue 都正确,confirm被回调, ack=true
-        rabbitmqService.convertAndSend(TestMqConfig.EXCHANGE_TEST, TestMqConfig.QUEUE_TEST, houseInfo, correlationData)
-        LOGGER.info("=======1=========================>{}", "test")
-        Thread.sleep(1000)
-        // exchange 错误,queue 正确,confirm被回调, ack=false
-        rabbitmqService.convertAndSend(TestMqConfig.EXCHANGE_TEST+"111", TestMqConfig.QUEUE_TEST, houseInfo, correlationData)
-        LOGGER.info("=======2=========================>{}", "test")
-        Thread.sleep(1000)
-        // exchange 正确,queue 错误 ,confirm被回调, ack=true; return被回调 replyText:NO_ROUTE
-        rabbitmqService.convertAndSend(TestMqConfig.EXCHANGE_TEST, TestMqConfig.QUEUE_TEST+"111", houseInfo, correlationData)
-        LOGGER.info("=======3=========================>{}", "test")
-        Thread.sleep(1000)
-        // exchange 错误,queue 错误,confirm被回调, ack=false
-        rabbitmqService.convertAndSend(TestMqConfig.EXCHANGE_TEST+"111", TestMqConfig.QUEUE_TEST+"111", houseInfo, correlationData)
-        LOGGER.info("=======4=========================>{}", "test")
     }
 
     companion object {
