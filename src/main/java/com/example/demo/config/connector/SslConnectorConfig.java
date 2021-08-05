@@ -15,10 +15,10 @@ import org.springframework.context.annotation.Configuration;
  * @Author MengQingHao
  * @Date 2020/5/8 10:52 上午
  */
-@Configuration
+//@Configuration
 public class SslConnectorConfig {
 
-    @Bean
+//    @Bean
     public ServletWebServerFactory servletWebServerFactory() {
         TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory() {
             @Override
