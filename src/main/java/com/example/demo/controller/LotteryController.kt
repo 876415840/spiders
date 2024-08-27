@@ -30,7 +30,7 @@ class LotteryController {
     lateinit var lotteryService: LotteryService
 
     @Autowired
-    @Qualifier("lotteryDataService")
+    @Qualifier("shuangSeQiuLotteryDataService")
     lateinit var realtyDataService: RealtyDataService
 
     /**
@@ -52,7 +52,7 @@ class LotteryController {
     /**
      * 爬历史双色球
      */
-    @GetMapping("/spiders")
+    @GetMapping("/spiders/shuangSeQiu")
     fun spidersOldNumbers(): String {
         var index = realtyDataService.getIndex()
         CompletableFuture.runAsync { realtyDataService.spiderData(); }

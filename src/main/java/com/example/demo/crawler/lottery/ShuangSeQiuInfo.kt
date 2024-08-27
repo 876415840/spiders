@@ -1,6 +1,5 @@
 package com.example.demo.crawler.lottery
 
-import com.geccocrawler.gecco.annotation.Attr
 import com.geccocrawler.gecco.annotation.Gecco
 import com.geccocrawler.gecco.annotation.HtmlField
 import com.geccocrawler.gecco.annotation.Request
@@ -13,8 +12,8 @@ import com.geccocrawler.gecco.spider.HtmlBean
  * @Date 2019/11/11 2:05 下午
  * @Version 1.0
  */
-@Gecco(pipelines = ["handleLottery"])
-class LotteryInfo : HtmlBean {
+@Gecco(pipelines = ["handleShuangSeQiuInfo"])
+class ShuangSeQiuInfo : HtmlBean {
 
     // 向指定URL发送GET请求
     @Request

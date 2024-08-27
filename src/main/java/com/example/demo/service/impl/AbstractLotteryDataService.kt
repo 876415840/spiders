@@ -1,52 +1,20 @@
 package com.example.demo.service.impl
 
-import com.example.demo.mapper.HouseInfoMapper
-import com.example.demo.mapper.ShuangSeQiuMapper
 import com.example.demo.service.RealtyDataService
 import com.geccocrawler.gecco.GeccoEngine
 import com.geccocrawler.gecco.pipeline.PipelineFactory
-import org.apache.commons.lang3.StringUtils
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.stereotype.Service
 
 /**
- * @Description: 爬取双色球中奖记录
+ * @Description: 爬取彩票中奖记录
  * @Author MengQingHao
  * @Date 2019/11/11 6:36 下午
  * @Version 1.0
  */
-@Service("lotteryDataService")
-class LotteryDataServiceImpl : RealtyDataService {
-
-    private val logger: Logger = LoggerFactory.getLogger(LotteryDataServiceImpl::class.java)
-
-    private var index = 0
+abstract class AbstractLotteryDataService : RealtyDataService {
 
     @Autowired
     private lateinit var springPipelineFactory: PipelineFactory
-
-    @Autowired
-    private lateinit var shuangSeQiuMapper: ShuangSeQiuMapper
-
-    override fun getIndex(): Int {
-        return index
-    }
-
-    override fun spiderData() {
-        index++
-        logger.info("爬取双色球数据-------------start")
-
-        try {
-            val maxPeriod = shuangSeQiuMapper.getMaxPeriod()
-            runSpider(maxPeriod.toString().substring(2))
-        } catch (e: Exception) {
-            logger.info("爬取双色球异常", e)
-        }
-
-        logger.info("爬取双色球数据-------------end")
-    }
 
     /**
      * 爬取数据
@@ -56,13 +24,13 @@ class LotteryDataServiceImpl : RealtyDataService {
      * @date 2019/10/31 11:57 AM
      * @return
      */
-    private fun runSpider(start: String) {
+    protected fun runSpider(url: String) {
         GeccoEngine.create()
                 .pipelineFactory(springPipelineFactory)
                 // 工程的包路径
                 .classpath("com.example.demo.crawler.lottery")
                 // 开始抓取的页面地址
-                .start(StringUtils.join("http://kaijiang.500.com/shtml/ssq/", start, ".shtml"))
+                .start(url)
                 // 开启几个爬虫线程
                 .thread(2)
                 // 单个爬虫每次抓取完一个请求后的间隔时间
