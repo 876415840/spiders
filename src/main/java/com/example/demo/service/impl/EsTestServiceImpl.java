@@ -3,10 +3,9 @@ package com.example.demo.service.impl;
 import com.example.demo.entity.EsTest;
 import com.example.demo.mapper.EsTestRepository;
 import com.example.demo.service.EsTestService;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.util.List;
 import java.util.Optional;
 
 /**
