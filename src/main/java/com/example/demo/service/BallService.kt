@@ -17,7 +17,7 @@ interface BallService {
      * @version 1.0
      */
     fun setBallProbability(ballCounts: List<BallCountVO>) {
-        var sum = ballCounts.sumBy{it.count!!}
+        var sum = ballCounts.sumOf { it.count!! }
         var size = ballCounts.size
         var probabilitySum = 0
         for (ballCount in ballCounts) {
