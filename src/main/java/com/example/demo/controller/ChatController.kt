@@ -1,6 +1,7 @@
 package com.example.demo.controller
 
 import cn.hutool.http.HttpUtil
+import cn.hutool.json.JSONUtil
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.GetMapping
@@ -29,10 +30,10 @@ class ChatController {
             val decodedParam = URLDecoder.decode(chat, StandardCharsets.UTF_8.name())
             val result = HttpUtil.post(ollamaUrl, String.format(ollamaBody, decodedParam))
             log.info("Chat result: {}", result)
-            return result;
+            return JSONUtil.parseObj(result).getJSONObject("message").getStr("content")
         } catch (e: Exception) {
             log.error("Error decoding chat parameter", e)
-            return "Error:" + e.message;
+            return "Error:" + e.message
         }
     }
 
