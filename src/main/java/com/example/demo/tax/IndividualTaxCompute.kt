@@ -72,19 +72,19 @@ class IndividualTaxCompute(private var amount: BigDecimal, private var month: In
         var ssf = base.multiply(ssfRatio)
         ssf = ssf.add(BigDecimal(3))
         // 月应纳税所得额 = 月工资 - 社保公积金 - 其他专项扣减 - 起征额
-        var monthAmount = amount!!.subtract(ssf).subtract(other).subtract(startAmount)
+        var monthAmount = amount.subtract(ssf).subtract(other).subtract(startAmount)
         if (monthAmount <= BigDecimal.ZERO) {
             return null
         }
 
         // 当前应纳税所得额(年)
-        var oldAmount = monthAmount.multiply(BigDecimal(month!!))
+        var oldAmount = monthAmount.multiply(BigDecimal(month))
         var taxLevelEnum = IndividualIncomeTaxLevelEnum.priceOf(oldAmount)
         var tax = monthAmount.multiply(BigDecimal(taxLevelEnum!!.tax)).divide(BigDecimal(100))
         tax = tax.setScale(2, RoundingMode.HALF_UP)
         result["incomeReal"] = amount.subtract(ssf).subtract(tax).setScale(2, RoundingMode.HALF_UP).toString()
         result["ssf"] = ssf.setScale(2, RoundingMode.HALF_UP).toString()
-        result["other"] = other!!.toString()
+        result["other"] = other.toString()
         result["start"] = startAmount.toString()
         result["tax"] = tax.toString()
         result["tips"] = tips

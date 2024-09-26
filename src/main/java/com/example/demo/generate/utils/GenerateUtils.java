@@ -4,9 +4,9 @@ package com.example.demo.generate.utils;
 
 import com.example.demo.generate.db.MysqlConnection;
 import com.example.demo.generate.po.GenerateColumn;
-import com.mysql.jdbc.Connection;
 import org.apache.commons.lang3.StringUtils;
 
+import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
