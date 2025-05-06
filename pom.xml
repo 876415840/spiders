@@ -14,14 +14,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.3</version>
+		<version>3.4.4</version>
 		<relativePath/>
 	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot-satarter.version>3.3.3</spring-boot-satarter.version>
+        <spring-boot-satarter.version>3.4.4</spring-boot-satarter.version>
         <kotlin.version>2.0.20</kotlin.version>
         <jackson-module-kotlin.version>2.17.2</jackson-module-kotlin.version>
         <maven.compiler.source>22</maven.compiler.source>
@@ -39,6 +39,7 @@
         <htmlunit.version>2.70.0</htmlunit.version>
         <jfreechart.version>1.5.5</jfreechart.version>
         <lombok.version>1.18.34</lombok.version>
+        <spring-ai.version>1.0.0-SNAPSHOT</spring-ai.version>
     </properties>
 
 	<dependencies>
@@ -65,6 +66,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
             <version>${spring-boot-satarter.version}</version>
+        </dependency>
+
+        <!-- AI -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-openai</artifactId>
+            <version>${spring-ai.version}</version>
         </dependency>
 
         <!-- 自动生成代码 -->
